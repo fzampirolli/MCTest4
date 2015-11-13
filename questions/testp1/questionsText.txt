@@ -22,11 +22,11 @@ QT::assunto 7::i:: Escreva 222 um programa para inverter os elementos ímpares q
 
 \drawLines{10}
 
-QT::assunto 7::i:: Escreva 333 um programa para inverter os elementos ímpares que estão nas posições pares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
+QT::assunto 7::j:: Escreva 333 um programa para inverter os elementos ímpares que estão nas posições pares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
 
 \drawLines{10}
 
-QT::assunto 7::i:: Escreva 444 um programa para inverter os elementos ímpares que estão nas posições pares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
+QT::assunto 7::j:: Escreva 444 um programa para inverter os elementos ímpares que estão nas posições pares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
 
 \drawLines{10}
 
