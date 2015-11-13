@@ -1,0 +1,57 @@
+QE::assunto 1 - assunto 10::a:: pergunta fácil Q1a1 - com a primeira variação da subclasse a: 
+A: resposta 1a1-a 
+A: resposta 1a1-b
+A: resposta 1a1-c
+A: resposta 1a1-d
+A: resposta 1a1-e
+
+QE::assunto 1 - assunto 10::a:: pergunta fácil Q1a2 - com segunda variações da subclasse a: 
+A: resposta 
+1a2-a 
+A: resposta 1a2-b
+A: resposta 1a2-c
+A: resposta 1a2-d
+A: resposta 1a2-e
+
+QE::assunto 1::b:: pergunta fácil Q1b1 - com primeira variações da subclasse b: 
+A: resposta 1b1-a 
+A: resposta 1b1-b
+A: resposta 1b1-c
+A: resposta 1b1-d
+A: resposta 1b1-e
+
+QE::assunto 1::b:: pergunta fácil Q1b2 - com segunda variações da subclasse b: 
+A: resposta 1b2-a 
+A: resposta 1b2-b
+A: resposta 1b2-c
+A: resposta 1b2-d
+A: resposta 1b2-e
+
+QE::assunto 2:: pergunta Q2  com exemplo de fórmula em tex: 
+$\sin A \cos B = \frac{1}{2}\left[ \sin(A-B)+\sin(A+B) \right]$
+A: resposta 2a
+A: resposta 2b
+A: resposta 2c
+A: resposta 2d
+A: resposta 2e
+
+QE::assunto 2:: pergunta Q3
+A: resposta 3a
+A: resposta 3b
+A: resposta 3c
+A: resposta 3d
+A: resposta 3e
+
+QM::assunto 2:: pergunta Q4
+A: resposta 4a
+A: resposta 4b
+A: resposta 4c
+A: resposta 4d
+A: resposta 4e
+
+QM::assunto 3:: pergunta Q5
+A: resposta 5a
+A: resposta 5b
+A: resposta 5c
+A: resposta 5d
+A: resposta 5e

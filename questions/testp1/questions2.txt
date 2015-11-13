@@ -1,0 +1,62 @@
+QM::assunto 4:: pergunta Q6
+A: resposta 6a
+A: resposta 6b
+A: resposta 6c
+A: resposta 6d
+A: resposta 6e
+
+QH::assunto 5:: pergunta Q7
+A: resposta 7a
+A: resposta 7b
+A: resposta 7c
+A: resposta 7d
+A: resposta 7e
+
+QH::assunto 5:: pergunta Q8
+A: resposta 8a
+A: resposta 8b
+A: resposta 8c
+A: resposta 8d
+A: resposta 8e
+
+QH:: pergunta Q9
+A: resposta 9a
+A: resposta 9b
+A: resposta 9c
+A: resposta 9d
+A: resposta 9e
+
+QH:: pergunta Q10
+A: resposta 0a
+A: resposta 0b
+A: resposta 0c
+A: resposta 0d
+A: resposta 0e
+
+QH:: pergunta Q11
+A: resposta 11a
+A: resposta 11b
+A: resposta 11c
+A: resposta 11d
+A: resposta 11e
+
+QM:: pergunta Q12
+A: resposta 12a
+A: resposta 12b
+A: resposta 12c
+A: resposta 12d
+A: resposta 12e
+
+QE:: pergunta Q13
+A: resposta 13a
+A: resposta 13b
+A: resposta 13c
+A: resposta 13d
+A: resposta 13e
+
+QE:: pergunta Q14
+A: resposta 14a
+A: resposta 14b
+A: resposta 14c
+A: resposta 14d
+A: resposta 14e

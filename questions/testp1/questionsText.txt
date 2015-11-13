@@ -1,0 +1,32 @@
+QT::assunto 7:: O programa abaixo lê dois valores para as variáveis X e Y, efetua a troca dos valores de forma que a variável X passe a ter o valor de Y, e que a variável Y passe a ter o valor de X. Complete a(s) instrução(ões) "AQUI".
+\begin{verbatim}
+programa
+{
+    funcao inicio()
+    {
+          real X, Y, aux
+          leia (X, Y)
+          AQUI
+          escreva(X, Y)
+     }
+}
+\end{verbatim}
+
+\drawLines{10}
+
+QT::assunto 7::i:: Escreva 111 um programa para inverter os elementos pares que estão nas posições ímpares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
+
+\drawLines{10}
+
+QT::assunto 7::i:: Escreva 222 um programa para inverter os elementos ímpares que estão nas posições pares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
+
+\drawLines{10}
+
+QT::assunto 7::i:: Escreva 333 um programa para inverter os elementos ímpares que estão nas posições pares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
+
+\drawLines{10}
+
+QT::assunto 7::i:: Escreva 444 um programa para inverter os elementos ímpares que estão nas posições pares de um vetor com X elementos, onde X é um inteiro definido pelo usuário.
+
+\drawLines{10}
+

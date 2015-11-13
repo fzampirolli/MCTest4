@@ -1,0 +1,46 @@
+numQE	       :: 4	      :: número de questões fáceis
+numQM	       :: 3	      :: número de questões médias
+numQH	       :: 2	      :: número de questões difíceis
+numQT	       :: 2	      :: número de questões dissertativas
+pasteQuestions :: testp1      :: pasta contendo o banco de questões em arqs. txt
+pasteClasses   :: 2015q3test  :: pasta conteno as turmas em arquivos csv
+randomTests    :: 1           :: =0, questões não aleatórias
+MCTest_sheets  :: 2	      :: =0 somente quadros de respostas; =1 somente questões; =2 cc
+template       :: 1	      :: =0, não salva arquivo com os gabaritos *_GAB
+duplexPrinting :: 1	      :: =0, impressão em um lado da folha, cc, frente e verso
+maxQuestQuadro :: 20	      :: número máximo de questões por quadro
+maxQuadrosHoz  :: 4	      :: número máximo de quadros na horizontal
+headerByQuestion :: 1        :: =1 um cabeçalho por questão dissertativa
+
+title          :: Universidade Federal do ABC
+course	       :: Processamento da Informação - BC0505
+teachers       :: Denise Goya, Itana Stiubiener, Francisco Zampirolli, Luiz Rozante, Monael Ribeiro
+period         :: 3/2015
+modality       :: Semipresencial
+date	       :: 22/10/2015
+logo	       :: ufabc.eps   :: logo tem que estar na pasta figs
+language       :: portuguese  :: por enquanto, portuguese ou english
+
+instructions1 ::
+1. Pinte somente DENTRO DOS CÍRCULOS de cada questão.  2. Não rasure.  3. Cada questão possui uma única resposta correta.
+4. Somente serão consideradas as respostas na região "Parte 1" desta página para as questões de múltipa-escolha.
+
+instructions2 ::
+1. Proibida a consulta de livros ou anotações.  2. Proibido o uso de dispositivos eletrônicos. 3. Somente serão
+consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
+
+titPart1 :: Parte 1 - Quadro(s) de Respostas - Não utilize esta FOLHA como rascunho!
+titPart2 :: Parte 2 - Questões de Múltipa-Escolha
+titPart3 :: Parte 3 - Questões Dissertativas
+
+endTable ::
+\begin{table}[h]
+\centering
+\textbf{Cálculo dos Conceitos} \\ \vspace{5mm}
+\begin{tabular}{|c|c|c|c|} \hline 
+Questões 1-12 & Questão Dissertativa & Final\\ \hline 
+              & &  \\  
+              & &  \\ 
+              & &  \\ \hline 
+\end{tabular}
+\end{table}
