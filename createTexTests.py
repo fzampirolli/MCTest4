@@ -694,9 +694,14 @@ def geraTex2PDF(provas):
         p = os.getcwd()
         os.chdir(p+past[1:])
         os.system('cd '+f[len(past)+1:])
-        os.system('latex '+'.'+barra+arq)
-        os.system('dvipdf '+'.'+barra+arq[:-4]+'.dvi')
-        os.system('rm *.aux *.dvi *.aux *.log')
+        os.system('latex '+'.'+arq)
+        if os.name == 'nt': # Windows
+            os.system('dvips -P pdf '+'.'+arq[:-4]+'.dvi')
+            os.system('ps2pdf '+'.'+arq[:-4]+'.ps')
+            os.system('del *.aux *.dvi *.aux *.log *.ps')
+        else:
+            os.system('dvipdf '+'.'+arq[:-4]+'.dvi')
+            os.system('rm *.aux *.dvi *.aux *.log')
         os.chdir(p)
                                        
 
