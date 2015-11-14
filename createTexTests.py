@@ -1,5 +1,3 @@
-
-#!/Users/fz/anaconda/bin/ipython
 # -*- coding: utf-8 -*-
 
 # parte do código apresentado neste documento foi inspirado de https://code.google.com/p/criaprova
@@ -366,7 +364,7 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
         nomeAluno="\\textbf{Aluno:} %s\n" % nomeAluno
         strAluno = "\\noindent"+nomeAluno+"\\hfill"+idAluno+"\\hfill"+turma+"\\hspace{-1mm}\n"
         ass = "\\noindent\\textbf{Ass:}\\rule{11.5cm}{0.1pt}\\hfill\\hspace{1cm}\n"
-        instrucoes = "Instruções: ".decode('utf-8').encode("latin1")
+        instrucoes = "Instru\\c c\\~oes: "
         course = "Disciplina:"
         teachers = "Professor(es):"
         period = "Quadrimestre:"
