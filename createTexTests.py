@@ -286,9 +286,13 @@ def classesReadFiles(files):
         with open(fi, 'rb') as f:
             reader = csv.reader(f, delimiter=';')
             for row in reader:
-                #print ">>>>", row
-                s = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
-                alunos.append([fi,row[0],s])
+                try:
+                    print ">>>>", row
+                    s = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
+                    alunos.append([fi,row[0],s])
+                except:
+                    print "corrigir linhas do arquivo"
+    
         print "turma lida %-40s com %d alunos" % (fi,len(alunos))
         turmas.append(alunos)
     print ""
@@ -389,6 +393,8 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
         arqprova.write("\\makeatletter\\renewcommand*\\cleardoublepage{\\ifodd\\c@page \\else\\hbox{}\\newpage\\fi}\n")
         arqprova.write("\\makeatother\n")
         arqprova.write("\\cleardoublepage\n")
+    #else:
+    #    arqprova.write("\n \ \ \\ \n \\newpage")
     
     # header da página 1/2
     arqprova.write("\\begin{table}[h]\\centering\n")
@@ -410,43 +416,43 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
 
 def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
     preambulo1 = """
-        \documentclass[10pt,brazil,a4paper]{exam}
-        \usepackage[latin1]{inputenc}
-        \usepackage[portuguese]{babel}
-        \usepackage[dvips]{graphicx}
-        %\usepackage{multicol}
-        %\usepackage{shadow}
-        %\usepackage{pifont}
-        %\usepackage{listings}
-        %\usepackage{fancyvrb}
-        
-        \\newcommand*\\varhrulefill[1][0.4pt]{\\leavevmode\\leaders\\hrule height#1\\hfill\\kern0pt}
-        
-        \\def\\drawLines#1{{\\color{cyan}\\foreach \\x in {1,...,#1}{\\par\\vspace{2mm}\\noindent\\hrulefill}}}
-        
-        \usepackage{enumitem}
-        \usepackage{multirow}
-        \usepackage{amsmath}
-        \usepackage{changepage,ifthen}
-        %\usepackage{boxedminipage}
-        %\usepackage{theorem}
-        \usepackage{verbatim}
-        \usepackage{tabularx}
-        %\usepackage{moreverb}
-        \usepackage{times}
-        %\usepackage{relsize}
-        \usepackage{pst-barcode}
-        \usepackage{tikz}
-        \setlength{\\textwidth}{185mm}
-        \setlength{\\oddsidemargin}{-0.5in}
-        \setlength{\\evensidemargin}{0in}
-        \setlength{\\columnsep}{8mm}
-        \setlength{\\topmargin}{-28mm}
-        \setlength{\\textheight}{265mm}
-        \setlength{\\itemsep}{0in}
-        \\begin{document}
-        \\pagestyle{empty}
-        %\lstset{language=python}
+\documentclass[10pt,brazil,a4paper]{exam}
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[dvips]{graphicx}
+%\usepackage{multicol}
+%\usepackage{shadow}
+%\usepackage{pifont}
+%\usepackage{listings}
+%\usepackage{fancyvrb}
+
+\\newcommand*\\varhrulefill[1][0.4pt]{\\leavevmode\\leaders\\hrule height#1\\hfill\\kern0pt}
+
+\\def\\drawLines#1{{\\color{cyan}\\foreach \\x in {1,...,#1}{\\par\\vspace{2mm}\\noindent\\hrulefill}}}
+
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{changepage,ifthen}
+%\usepackage{boxedminipage}
+%\usepackage{theorem}
+\usepackage{verbatim}
+\usepackage{tabularx}
+%\usepackage{moreverb}
+\usepackage{times}
+%\usepackage{relsize}
+\usepackage{pst-barcode}
+\usepackage{tikz}
+\setlength{\\textwidth}{185mm}
+\setlength{\\oddsidemargin}{-0.5in}
+\setlength{\\evensidemargin}{0in}
+\setlength{\\columnsep}{8mm}
+\setlength{\\topmargin}{-28mm}
+\setlength{\\textheight}{265mm}
+\setlength{\\itemsep}{0in}
+\\begin{document}
+\\pagestyle{empty}
+%\lstset{language=python}
         """
     
     files = []
@@ -635,7 +641,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                             if (config['titPart2']!="\n"):
                                 arqprova.write("\\begin{center}\\textbf{"+config['titPart2'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
                                 
-                            arqprova.write("{\\small\n")
+                            #arqprova.write("{\\small\n")
                             arqprova.write("\\begin{questions}\n")
                             arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
                             for q in t[3]: # questões
@@ -650,31 +656,45 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                                         arqprova.write("\\choice %s\n" % r.decode('utf-8').encode("latin1"))
                                     arqprova.write("\\end{choices}\n")
                             arqprova.write("\\end{questions}\n")
-                            arqprova.write("}")
+                            #arqprova.write("}")
                             arqprova.write("\n \ \ \\ \n \\newpage\n")
 
                         if numQT>0:
+
                             ##################  questoes dissertativas - Parte 3 ##################
-                            if headerByQuestion!=1: # =1, um cabeçalho por questão
-                                defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
-                                arqprova.write("\n\\vspace{4mm}\n")
+                            #if headerByQuestion!=1: # =1, um cabeçalho por questão
+                            #    defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
+                            #    arqprova.write("\n\\vspace{4mm}\n")
                         
-                            if config['titPart3']!="\n":
-                                arqprova.write("\\begin{center}\\textbf{"+config['titPart3'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
+                            if headerByQuestion==0 and config['titPart3']!="\n":
+                                arqprova.write("\\begin{center}"+config['titPart3'].decode('utf-8').encode("latin1")+"\\end{center}\n")
                             
-                            arqprova.write("{\\small\n")
+
+                            #arqprova.write("{\\large\n")
                             #arqprova.write("\\begin{questions}\n")
                             #arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
+                            headerFistPageOnly = True
                             for q in sorted(t[3]): # questões
                                 if q[1]==[]:
-                                    if headerByQuestion==1: # um cabeçalho na página por questão
+                                    if (headerByQuestion==1 or headerFistPageOnly) and config['instructions3']!="\n": # um cabeçalho na página por questão
+                                        headerFistPageOnly = False
                                         defineHeader(arqprova,strTurma,t[1],t[2])
-                                        arqprova.write("\n\n\\vspace{4mm}")
-                                    arqprova.write("\\noindent %s \n\n" % q[0].decode('utf-8').encode("latin1"))
-                                    arqprova.write("\n \ \ \\ \n \\newpage\n")
-                                    #arqprova.write("\\question %s\n" % q[0].decode('utf-8').encode("latin1"))
+                                        
+                                        if config['instructions3']!="\n":
+                                            arqprova.write("\\\\{\\scriptsize\n\n\\noindent\\textbf{"+instrucoes+"}\\vspace{-1mm}\\begin{verbatim}\n")
+                                            arqprova.write(config['instructions3'].decode('utf-8').encode("latin1"))
+                                            arqprova.write("\\end{verbatim}}\n")
+                                
+                                        arqprova.write("\n\n\\vspace{1mm}")
+                                
+                                    #print q[0]
+                                    arqprova.write("{\n\n\\normalsize\\noindent %s }\n\n" % q[0].decode('utf-8').encode("latin1"))
+                                    #print ">>>>passou"
+                            arqprova.write("\n \ \ \\ \n \\newpage\n")
+                            #arqprova.write("\\question %s\n" % q[0].decode('utf-8').encode("latin1"))
                             #arqprova.write("\\end{questions}\n")
-                            arqprova.write("}\n")
+                            #arqprova.write("}\n")
+
 
 
             arqprova.write("\\end{document}")
