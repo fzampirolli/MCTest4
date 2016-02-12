@@ -16,7 +16,7 @@ else:
 
 mypath = '.'+barra
 mypathQuestions = mypath+'questions'+barra
-mypathClasses = mypath+'classes'+barra
+mypathClasses = mypath+'courses'+barra
 mypathTex = mypath+'tex'+barra
 listextQuestoes = ['*.txt']
 listextTurmas = ['*.csv']
