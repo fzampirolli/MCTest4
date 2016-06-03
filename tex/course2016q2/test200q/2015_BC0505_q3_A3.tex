@@ -1,0 +1,3156 @@
+
+        \documentclass[10pt,brazil,a4paper]{exam}
+        \usepackage[latin1]{inputenc}
+        \usepackage[portuguese]{babel}
+        \usepackage[dvips]{graphicx}
+        %\usepackage{multicol}
+        %\usepackage{shadow}
+        %\usepackage{pifont}
+        %\usepackage{listings}
+        %\usepackage{fancyvrb}
+        
+        \newcommand*\varhrulefill[1][0.4pt]{\leavevmode\leaders\hrule height#1\hfill\kern0pt}
+        
+        \def\drawLines#1{{\color{cyan}\foreach \x in {1,...,#1}{\par\vspace{2mm}\noindent\hrulefill}}}
+        
+        \usepackage{enumitem}
+        \usepackage{multirow}
+        \usepackage{amsmath}
+        \usepackage{changepage,ifthen}
+        %\usepackage{boxedminipage}
+        %\usepackage{theorem}
+        \usepackage{verbatim}
+        \usepackage{tabularx}
+        %\usepackage{moreverb}
+        \usepackage{times}
+        %\usepackage{relsize}
+        \usepackage{pst-barcode}
+        \usepackage{tikz}
+        \setlength{\textwidth}{185mm}
+        \setlength{\oddsidemargin}{-0.5in}
+        \setlength{\evensidemargin}{0in}
+        \setlength{\columnsep}{8mm}
+        \setlength{\topmargin}{-28mm}
+        \setlength{\textheight}{265mm}
+        \setlength{\itemsep}{0in}
+        \begin{document}
+        \pagestyle{empty}
+        %\lstset{language=python}
+        \makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\begin{table}[h]\centering
+\begin{tabular}{|p{16mm}|p{16cm}|}
+\hline\multirow{4}{*}{\hspace{-2mm}\includegraphics[width=2cm]{../../../figs/ufabc.eps}}
+&\vspace{-2mm}\noindent\large\textbf{Universidade Federal do ABC}\\
+&\noindent\textbf{Disciplina:} Processamento da Informação - BC0505\\
+&\noindent\textbf{Professor(es):} Francisco de Assis Zampirolli\\
+&\noindent\textbf{Quadrimestre:} 2/2016\hfill\textbf{Modalidade:} Presencial\hfill\textbf{Data:} 22/06/2016\hspace{-8mm}\\
+\hline\end{tabular}
+\end{table}
+\vspace{-4mm}\small{
+\noindent\textbf{Aluno:} Joao Manoel
+\hfill\textbf{Matrícula:} 11111111
+\hfill\textbf{Turma:} 2015$\_$BC0505$\_$q3$\_$A3
+\hspace{-1mm}
+
+\vspace{8mm}
+\noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
+}\begin{pspicture}(6,0in)
+\psbarcode[scalex=1.6,scaley=0.35]{000011111111}{}{ean13}
+\end{pspicture}
+\\{\scriptsize
+
+\noindent\textbf{Instru\c c\~oes: }\vspace{-1mm}\begin{verbatim}
+
+1. Pinte somente DENTRO DOS CÍRCULOS de cada questão.  2. Não rasure.  3. Cada questão possui uma única resposta correta.
+4. Somente serão consideradas as respostas na região "Parte 1" desta página para as questões de múltipla-escolha.
+\end{verbatim}
+\begin{center}\textbf{Parte 1 - Quadro(s) de Respostas - Não utilize esta FOLHA como rascunho!}\end{center}
+\vspace{-5mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\begin{center}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {1,...,20} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {21,...,40} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-21+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {41,...,60} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {61,...,80} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-61+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+
+
+\end{center}
+\vspace{1cm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\newpage\thispagestyle{empty}\mbox{}
+ \ \ 
+\newpage
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\begin{table}[h]\centering
+\begin{tabular}{|p{16mm}|p{16cm}|}
+\hline\multirow{4}{*}{\hspace{-2mm}\includegraphics[width=2cm]{../../../figs/ufabc.eps}}
+&\vspace{-2mm}\noindent\large\textbf{Universidade Federal do ABC}\\
+&\noindent\textbf{Disciplina:} Processamento da Informação - BC0505\\
+&\noindent\textbf{Professor(es):} Francisco de Assis Zampirolli\\
+&\noindent\textbf{Quadrimestre:} 2/2016\hfill\textbf{Modalidade:} Presencial\hfill\textbf{Data:} 22/06/2016\hspace{-8mm}\\
+\hline\end{tabular}
+\end{table}
+\vspace{-4mm}\small{
+\noindent\textbf{Aluno:} Joao Manoel
+\hfill\textbf{Matrícula:} 11111111
+\hfill\textbf{Turma:} 2015$\_$BC0505$\_$q3$\_$A3
+\hspace{-1mm}
+
+\vspace{8mm}
+\noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
+}
+\vspace{4mm}
+\\{\scriptsize
+
+\noindent\textbf{Instru\c c\~oes: }\vspace{-1mm}\begin{verbatim}
+
+1. Proibida a consulta de livros ou anotações.  2. Proibido o uso de dispositivos eletrônicos. 3. Somente serão
+consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
+\end{verbatim}
+\begin{center}\textbf{Parte 2 - Questões de Múltipla-Escolha}\end{center}
+{\small
+\begin{questions}
+\itemsep0pt\parskip0pt\parsep0pt
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\end{choices}
+\end{questions}
+}
+ \ \ \ 
+ \newpage
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\begin{table}[h]\centering
+\begin{tabular}{|p{16mm}|p{16cm}|}
+\hline\multirow{4}{*}{\hspace{-2mm}\includegraphics[width=2cm]{../../../figs/ufabc.eps}}
+&\vspace{-2mm}\noindent\large\textbf{Universidade Federal do ABC}\\
+&\noindent\textbf{Disciplina:} Processamento da Informação - BC0505\\
+&\noindent\textbf{Professor(es):} Francisco de Assis Zampirolli\\
+&\noindent\textbf{Quadrimestre:} 2/2016\hfill\textbf{Modalidade:} Presencial\hfill\textbf{Data:} 22/06/2016\hspace{-8mm}\\
+\hline\end{tabular}
+\end{table}
+\vspace{-4mm}\small{
+\noindent\textbf{Aluno:} Manoel Sobrenome
+\hfill\textbf{Matrícula:} 11000000
+\hfill\textbf{Turma:} 2015$\_$BC0505$\_$q3$\_$A3
+\hspace{-1mm}
+
+\vspace{8mm}
+\noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
+}\begin{pspicture}(6,0in)
+\psbarcode[scalex=1.6,scaley=0.35]{000011000000}{}{ean13}
+\end{pspicture}
+\\{\scriptsize
+
+\noindent\textbf{Instru\c c\~oes: }\vspace{-1mm}\begin{verbatim}
+
+1. Pinte somente DENTRO DOS CÍRCULOS de cada questão.  2. Não rasure.  3. Cada questão possui uma única resposta correta.
+4. Somente serão consideradas as respostas na região "Parte 1" desta página para as questões de múltipla-escolha.
+\end{verbatim}
+\begin{center}\textbf{Parte 1 - Quadro(s) de Respostas - Não utilize esta FOLHA como rascunho!}\end{center}
+\vspace{-5mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\begin{center}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {1,...,20} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {21,...,40} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-21+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {41,...,60} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {61,...,80} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-61+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+
+
+\end{center}
+\vspace{1cm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\newpage\thispagestyle{empty}\mbox{}
+ \ \ 
+\newpage
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\begin{table}[h]\centering
+\begin{tabular}{|p{16mm}|p{16cm}|}
+\hline\multirow{4}{*}{\hspace{-2mm}\includegraphics[width=2cm]{../../../figs/ufabc.eps}}
+&\vspace{-2mm}\noindent\large\textbf{Universidade Federal do ABC}\\
+&\noindent\textbf{Disciplina:} Processamento da Informação - BC0505\\
+&\noindent\textbf{Professor(es):} Francisco de Assis Zampirolli\\
+&\noindent\textbf{Quadrimestre:} 2/2016\hfill\textbf{Modalidade:} Presencial\hfill\textbf{Data:} 22/06/2016\hspace{-8mm}\\
+\hline\end{tabular}
+\end{table}
+\vspace{-4mm}\small{
+\noindent\textbf{Aluno:} Manoel Sobrenome
+\hfill\textbf{Matrícula:} 11000000
+\hfill\textbf{Turma:} 2015$\_$BC0505$\_$q3$\_$A3
+\hspace{-1mm}
+
+\vspace{8mm}
+\noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
+}
+\vspace{4mm}
+\\{\scriptsize
+
+\noindent\textbf{Instru\c c\~oes: }\vspace{-1mm}\begin{verbatim}
+
+1. Proibida a consulta de livros ou anotações.  2. Proibido o uso de dispositivos eletrônicos. 3. Somente serão
+consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
+\end{verbatim}
+\begin{center}\textbf{Parte 2 - Questões de Múltipla-Escolha}\end{center}
+{\small
+\begin{questions}
+\itemsep0pt\parskip0pt\parsep0pt
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\end{choices}
+\end{questions}
+}
+ \ \ \ 
+ \newpage
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\begin{table}[h]\centering
+\begin{tabular}{|p{16mm}|p{16cm}|}
+\hline\multirow{4}{*}{\hspace{-2mm}\includegraphics[width=2cm]{../../../figs/ufabc.eps}}
+&\vspace{-2mm}\noindent\large\textbf{Universidade Federal do ABC}\\
+&\noindent\textbf{Disciplina:} Processamento da Informação - BC0505\\
+&\noindent\textbf{Professor(es):} Francisco de Assis Zampirolli\\
+&\noindent\textbf{Quadrimestre:} 2/2016\hfill\textbf{Modalidade:} Presencial\hfill\textbf{Data:} 22/06/2016\hspace{-8mm}\\
+\hline\end{tabular}
+\end{table}
+\vspace{-4mm}\small{
+\noindent\textbf{Aluno:} Maria Bela
+\hfill\textbf{Matrícula:} 11000001
+\hfill\textbf{Turma:} 2015$\_$BC0505$\_$q3$\_$A3
+\hspace{-1mm}
+
+\vspace{8mm}
+\noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
+}\begin{pspicture}(6,0in)
+\psbarcode[scalex=1.6,scaley=0.35]{000011000001}{}{ean13}
+\end{pspicture}
+\\{\scriptsize
+
+\noindent\textbf{Instru\c c\~oes: }\vspace{-1mm}\begin{verbatim}
+
+1. Pinte somente DENTRO DOS CÍRCULOS de cada questão.  2. Não rasure.  3. Cada questão possui uma única resposta correta.
+4. Somente serão consideradas as respostas na região "Parte 1" desta página para as questões de múltipla-escolha.
+\end{verbatim}
+\begin{center}\textbf{Parte 1 - Quadro(s) de Respostas - Não utilize esta FOLHA como rascunho!}\end{center}
+\vspace{-5mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\begin{center}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {1,...,20} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {21,...,40} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-21+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {41,...,60} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+\begin{tikzpicture}[font=\tiny]
+  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
+  }
+  \foreach \line in {61,...,80} {
+     \begin{scope}[xshift=0cm,yshift=-(\line-61+1)*5mm]
+       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
+           \node at (-0.1,0) {\line};
+           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{1 cm}
+
+
+\end{center}
+\vspace{1cm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
+
+\newpage\thispagestyle{empty}\mbox{}
+ \ \ 
+\newpage
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\makeatother
+\cleardoublepage
+\begin{table}[h]\centering
+\begin{tabular}{|p{16mm}|p{16cm}|}
+\hline\multirow{4}{*}{\hspace{-2mm}\includegraphics[width=2cm]{../../../figs/ufabc.eps}}
+&\vspace{-2mm}\noindent\large\textbf{Universidade Federal do ABC}\\
+&\noindent\textbf{Disciplina:} Processamento da Informação - BC0505\\
+&\noindent\textbf{Professor(es):} Francisco de Assis Zampirolli\\
+&\noindent\textbf{Quadrimestre:} 2/2016\hfill\textbf{Modalidade:} Presencial\hfill\textbf{Data:} 22/06/2016\hspace{-8mm}\\
+\hline\end{tabular}
+\end{table}
+\vspace{-4mm}\small{
+\noindent\textbf{Aluno:} Maria Bela
+\hfill\textbf{Matrícula:} 11000001
+\hfill\textbf{Turma:} 2015$\_$BC0505$\_$q3$\_$A3
+\hspace{-1mm}
+
+\vspace{8mm}
+\noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
+}
+\vspace{4mm}
+\\{\scriptsize
+
+\noindent\textbf{Instru\c c\~oes: }\vspace{-1mm}\begin{verbatim}
+
+1. Proibida a consulta de livros ou anotações.  2. Proibido o uso de dispositivos eletrônicos. 3. Somente serão
+consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
+\end{verbatim}
+\begin{center}\textbf{Parte 2 - Questões de Múltipla-Escolha}\end{center}
+{\small
+\begin{questions}
+\itemsep0pt\parskip0pt\parsep0pt
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta e
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\choice resposta d
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta c
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta d
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta c
+\choice resposta d
+\choice resposta a
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
+\choice resposta e
+\choice resposta d
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta d
+\end{choices}
+\end{questions}
+}
+ \ \ \ 
+ \newpage
+\end{document}

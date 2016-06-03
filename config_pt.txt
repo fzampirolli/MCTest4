@@ -2,8 +2,8 @@ numQE	       :: 4	      :: number of easy questions
 numQM	       :: 3	      :: number of mean questions
 numQH	       :: 2	      :: number of hard questions
 numQT	       :: 2	      :: number of textual questions
-pasteCourse   :: course2016q2 :: folder containing the classes in csv files
-pasteQuestions :: testp1      :: folder containing the database issues in txt files
+folderCourse   :: course2016q2 :: folder containing the classes in csv files
+folderQuestions :: testp1      :: folder containing the database issues in txt files
 randomTests    :: 1           :: =0, questions not random
 MCTest_sheets  :: 2	      :: =0 only answer sheet; =1 only questions; =2 cc
 template       :: 1	      :: =0, unsaved file with the templates *_GAB

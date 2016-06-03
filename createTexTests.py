@@ -16,43 +16,43 @@ else:
 
 mypath = '.'+barra
 mypathQuestions = mypath+'questions'+barra
-mypathClasses = mypath+'courses'+barra
+mypathCourses = mypath+'courses'+barra
 mypathTex = mypath+'tex'+barra
-listextQuestoes = ['*.txt']
-listextTurmas = ['*.csv']
+listextQuestions = ['*.txt']
+listextCourses = ['*.csv']
 
 
 letras_1 = ['A','B','C','D','E','F','G','H','I','J', 'K','L', 'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
-def getQuestao(i, todaslinhas):
-    tam = len(todaslinhas)
-    while i < tam and todaslinhas[i][:3] not in ['QT:','QE:','QM:','QH:']: # acha uma questão
+def getQuestion(i, AllLines):
+    tam = len(AllLines)
+    while i < tam and AllLines[i][:3] not in ['QT:','QE:','QM:','QH:']: # acha uma questão
         i += 1
     #if i == tam: return(i,' ') # não achou questão
-    tp = todaslinhas[i][:3]
+    tp = AllLines[i][:3]
     q = []
-    q.append(todaslinhas[i])
+    q.append(AllLines[i])
     i += 1
-    while i < tam and todaslinhas[i][:todaslinhas[i].find(':')] not in ['QT','QE','QM','QH','A']:
-        q.append(todaslinhas[i])
+    while i < tam and AllLines[i][:AllLines[i].find(':')] not in ['QT','QE','QM','QH','A']:
+        q.append(AllLines[i])
         i += 1
     if i<=tam and tp == 'QT:': # questao do tipo texto
         return (i,' '.join([x for x in q]))
-    if i<tam and tp in ['QE:','QM:','QH:'] and todaslinhas[i][:2] in ['QT','QE:','QM:','QH:']:
+    if i<tam and tp in ['QE:','QM:','QH:'] and AllLines[i][:2] in ['QT','QE:','QM:','QH:']:
         print 'ERRO: questão sem alternativas'
     return (i,' '.join([x for x in q]))
 
 
-def getResposta(i, todaslinhas):
-    tam = len(todaslinhas)
-    while i < tam and todaslinhas[i][:2] not in ['A:']: # acha uma questão
+def getAnswer(i, AllLines):
+    tam = len(AllLines)
+    while i < tam and AllLines[i][:2] not in ['A:']: # acha uma questão
         i += 1
     #if i == tam: return(i,' ') # não achou questão
     q = []
-    q.append(todaslinhas[i])
+    q.append(AllLines[i])
     i += 1
-    while i < tam and todaslinhas[i][:todaslinhas[i].find(':')] not in ['QT','QE','QM','QH','A']:
-        q.append(todaslinhas[i])
+    while i < tam and AllLines[i][:AllLines[i].find(':')] not in ['QT','QE','QM','QH','A']:
+        q.append(AllLines[i])
         i += 1
     return (i,' '.join([x for x in q]))
 
@@ -72,15 +72,17 @@ def questionsReadFiles(arquivos):
     arqnum = 0
     questnum = 0
     questtotal = 0
+    questions_file = 0
     
     for a in arquivos: # para cada arquivo de questões
+        
         arq = open(a)
-        todaslinhas = arq.readlines()
+        AllLines = arq.readlines()
 
-        tam = len(todaslinhas)
+        tam = len(AllLines)
         i = 0
         while i<tam:
-            i, q = getQuestao(i, todaslinhas)
+            i, q = getQuestion(i, AllLines)
             
             d = dict()
             
@@ -110,8 +112,8 @@ def questionsReadFiles(arquivos):
             respostas = []
             if d["t"] != "QT":
                 contRespostas = 0
-                while i < tam and todaslinhas[i][:todaslinhas[i].find(':')] in ['A']:
-                    i, r = getResposta(i,todaslinhas)
+                while i < tam and AllLines[i][:AllLines[i].find(':')] in ['A']:
+                    i, r = getAnswer(i,AllLines)
                     #if i == tam: break # não achou questão
                     respostas.append(r[2:].strip())
                     contRespostas +=  1
@@ -127,24 +129,38 @@ def questionsReadFiles(arquivos):
 
         arq.close()
         arqnum += 1
+        print "read the questions file: %-40s with %d questions" % (a,len(listao) - questions_file)
+        questions_file = len(listao)
+        
+    print "\nTotal of questions without suptype:"    
+    print "Easy questions QE: %d" % (len([y for y in listao if y['t'] == 'QE' and y['st']=='']))
+    print "Mean questions QM: %d" % (len([y for y in listao if y['t'] == 'QM' and y['st']=='']))
+    print "Hard questions QH: %d" % (len([y for y in listao if y['t'] == 'QH' and y['st']=='']))
+    print "Text questions QT: %d" % (len([y for y in listao if y['t'] == 'QT' and y['st']=='']))
+
+    print "\nTotal of questions with suptype:"    
+    print "Easy questions QE: %d" % (len([y for y in listao if y['t'] == 'QE' and y['st']!='']))
+    print "Mean questions QM: %d" % (len([y for y in listao if y['t'] == 'QM' and y['st']!='']))
+    print "Hard questions QH: %d" % (len([y for y in listao if y['t'] == 'QH' and y['st']!='']))
+    print "Text questions QT: %d" % (len([y for y in listao if y['t'] == 'QT' and y['st']!='']))
     
     return listao
 
-def criaListaTipos(listao,tipo,numQ):
+def createListTypes(listao,tipo,numQ):
     questTipo = [y for y in listao if y['t'] == tipo and y['st']==''] # pega todas as questões SEM subtipo
     
     st =  [(y['st'],y['n']) for y in listao if y['t'] == tipo and y['st']!=''] # pega COM subtipos
     if st:
         stSet = list(set([i[0] for i in st])) # retira elementos repetidos
-        for i in stSet: # para cada subtipo, pego apenas UMA questão
+        for i in stSet: # para cada subtipo, pego apenas UMA questão aleatoriamente
             li =  [(y['st'],y['n']) for y in listao if y['t'] == tipo and y['st']==i]
             escolhoUM = random.sample(li,1)
             ques  = [y for y in listao if y['n'] == escolhoUM[0][1]]
             questTipo.append(ques[0])
 
     if numQ > len(questTipo):
-        print "num de questões disponíveis %s: \t %-5d" % (tipo, len(questTipo))
-        print "\nERRO: número de questões solicitas é incompatível com o num de questões disponíveis\n"
+        print "number of available questions %s: \t %-5d" % (tipo, len(questTipo))
+        print "\nERRO: number of solicitous questions is incompatible with the number of available questions\n"
         sys.exit(-1)
     
     return questTipo
@@ -181,10 +197,10 @@ def createTests(listao, turmas):
         for n in t: # para cada aluno da turma
             questoes = []
             
-            questQE = criaListaTipos(listao,'QE',numQE) # tem que ficar aqui para pegar para cada aluno
-            questQM = criaListaTipos(listao,'QM',numQM) # uma questão aleatória de uma subclasse
-            questQH = criaListaTipos(listao,'QH',numQH) # caso exista
-            questQT = criaListaTipos(listao,'QT',numQT)
+            questQE = createListTypes(listao,'QE',numQE) # tem que ficar aqui para pegar para cada aluno
+            questQM = createListTypes(listao,'QM',numQM) # uma questão aleatória de uma subclasse
+            questQH = createListTypes(listao,'QH',numQH) # caso exista
+            questQT = createListTypes(listao,'QT',numQT)
         
             if int(randomTests)!=0: #questões aleatórias
                 quest = random.sample(questQE,numQE)
@@ -264,17 +280,17 @@ def readQuestionsFiles(p):
     fileQuestoes = []
     listdirQuestoes = glob.os.listdir(mypathQuestions)
     listdirQuestoes.append('')
-    for ext in listextQuestoes:
+    for ext in listextQuestions:
         for file in np.sort(glob.glob(mypathQuestions+p+barra+ext)):
             fileQuestoes.append(file)
     return fileQuestoes
 
 def readClassFiles(p):
     fileTurmas = []
-    listdirTurmas = glob.os.listdir(mypathClasses)
+    listdirTurmas = glob.os.listdir(mypathCourses)
     listdirTurmas.append('')
-    for ext in listextTurmas:
-        for file in np.sort(glob.glob(mypathClasses+p+barra+ext)):
+    for ext in listextCourses:
+        for file in np.sort(glob.glob(mypathCourses+p+barra+ext)):
             fileTurmas.append(file)
     return fileTurmas
 
@@ -286,14 +302,10 @@ def classesReadFiles(files):
         with open(fi, 'rb') as f:
             reader = csv.reader(f, delimiter=';')
             for row in reader:
-                try:
-                    print ">>>>", row
-                    s = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
-                    alunos.append([fi,row[0],s])
-                except:
-                    print "corrigir linhas do arquivo"
-    
-        print "turma lida %-40s com %d alunos" % (fi,len(alunos))
+                #print ">>>>", row
+                s = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
+                alunos.append([fi,row[0],s])
+        print "read the class file: %-40s with %d students" % (fi,len(alunos))
         turmas.append(alunos)
     print ""
     return turmas
@@ -302,10 +314,10 @@ def savesTemplates(gabaritos): # salva em disco todos os gabaritos num arquivo c
     print ""
 
     if randomTests==0: #questões não aleatórias
-        print "Atenção: foi escolhido a opção de gerar provas não aleatórias"
-        print "neste caso, se o professor desejar utilizar a correção automática"
-        print "usando o MCTest, será necessário fornecer um arquivo com o gabarito"
-        print "ou considerar que sempre a primeira prova processada do pdf é um gabarito"
+        print "Warning: You chose in config.txt the option to generate non-random tests."
+        print "In this case, if you want to use the automatic correction using MCTest,"
+        print "you must provide a file with the template or consider that the first test"
+        print "in pdf file is a template."
     
     else:
 
@@ -325,7 +337,7 @@ def savesTemplates(gabaritos): # salva em disco todos os gabaritos num arquivo c
             except:
                 os.mkdir(past)
             
-            past += barra+pasteQuestion
+            past += barra+folderQuestions
             try:
                 os.stat(past)
             except:
@@ -393,8 +405,6 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
         arqprova.write("\\makeatletter\\renewcommand*\\cleardoublepage{\\ifodd\\c@page \\else\\hbox{}\\newpage\\fi}\n")
         arqprova.write("\\makeatother\n")
         arqprova.write("\\cleardoublepage\n")
-    #else:
-    #    arqprova.write("\n \ \ \\ \n \\newpage")
     
     # header da página 1/2
     arqprova.write("\\begin{table}[h]\\centering\n")
@@ -416,43 +426,43 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
 
 def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
     preambulo1 = """
-\documentclass[10pt,brazil,a4paper]{exam}
-\usepackage[latin1]{inputenc}
-\usepackage[portuguese]{babel}
-\usepackage[dvips]{graphicx}
-%\usepackage{multicol}
-%\usepackage{shadow}
-%\usepackage{pifont}
-%\usepackage{listings}
-%\usepackage{fancyvrb}
-
-\\newcommand*\\varhrulefill[1][0.4pt]{\\leavevmode\\leaders\\hrule height#1\\hfill\\kern0pt}
-
-\\def\\drawLines#1{{\\color{cyan}\\foreach \\x in {1,...,#1}{\\par\\vspace{2mm}\\noindent\\hrulefill}}}
-
-\usepackage{enumitem}
-\usepackage{multirow}
-\usepackage{amsmath}
-\usepackage{changepage,ifthen}
-%\usepackage{boxedminipage}
-%\usepackage{theorem}
-\usepackage{verbatim}
-\usepackage{tabularx}
-%\usepackage{moreverb}
-\usepackage{times}
-%\usepackage{relsize}
-\usepackage{pst-barcode}
-\usepackage{tikz}
-\setlength{\\textwidth}{185mm}
-\setlength{\\oddsidemargin}{-0.5in}
-\setlength{\\evensidemargin}{0in}
-\setlength{\\columnsep}{8mm}
-\setlength{\\topmargin}{-28mm}
-\setlength{\\textheight}{265mm}
-\setlength{\\itemsep}{0in}
-\\begin{document}
-\\pagestyle{empty}
-%\lstset{language=python}
+        \documentclass[10pt,brazil,a4paper]{exam}
+        \usepackage[latin1]{inputenc}
+        \usepackage[portuguese]{babel}
+        \usepackage[dvips]{graphicx}
+        %\usepackage{multicol}
+        %\usepackage{shadow}
+        %\usepackage{pifont}
+        %\usepackage{listings}
+        %\usepackage{fancyvrb}
+        
+        \\newcommand*\\varhrulefill[1][0.4pt]{\\leavevmode\\leaders\\hrule height#1\\hfill\\kern0pt}
+        
+        \\def\\drawLines#1{{\\color{cyan}\\foreach \\x in {1,...,#1}{\\par\\vspace{2mm}\\noindent\\hrulefill}}}
+        
+        \usepackage{enumitem}
+        \usepackage{multirow}
+        \usepackage{amsmath}
+        \usepackage{changepage,ifthen}
+        %\usepackage{boxedminipage}
+        %\usepackage{theorem}
+        \usepackage{verbatim}
+        \usepackage{tabularx}
+        %\usepackage{moreverb}
+        \usepackage{times}
+        %\usepackage{relsize}
+        \usepackage{pst-barcode}
+        \usepackage{tikz}
+        \setlength{\\textwidth}{185mm}
+        \setlength{\\oddsidemargin}{-0.5in}
+        \setlength{\\evensidemargin}{0in}
+        \setlength{\\columnsep}{8mm}
+        \setlength{\\topmargin}{-28mm}
+        \setlength{\\textheight}{265mm}
+        \setlength{\\itemsep}{0in}
+        \\begin{document}
+        \\pagestyle{empty}
+        %\lstset{language=python}
         """
     
     files = []
@@ -471,7 +481,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
         except:
             os.mkdir(past)
 
-        past += barra+pasteQuestion
+        past += barra+folderQuestions
         try:
             os.stat(past)
         except:
@@ -482,7 +492,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
 
         with open(f, 'w') as arqprova:
             
-            print "aquivo latex salvo com as provas de todos os alunos da(s) turma(s):",f
+            print "latex file saved with the tests of all students of the class(es):",f
             arqprova = open(f,'w')
             arqprova.write(preambulo1.decode('utf-8').encode("latin1"))
             
@@ -641,7 +651,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                             if (config['titPart2']!="\n"):
                                 arqprova.write("\\begin{center}\\textbf{"+config['titPart2'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
                                 
-                            #arqprova.write("{\\small\n")
+                            arqprova.write("{\\small\n")
                             arqprova.write("\\begin{questions}\n")
                             arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
                             for q in t[3]: # questões
@@ -656,51 +666,37 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                                         arqprova.write("\\choice %s\n" % r.decode('utf-8').encode("latin1"))
                                     arqprova.write("\\end{choices}\n")
                             arqprova.write("\\end{questions}\n")
-                            #arqprova.write("}")
+                            arqprova.write("}")
                             arqprova.write("\n \ \ \\ \n \\newpage\n")
 
                         if numQT>0:
-
                             ##################  questoes dissertativas - Parte 3 ##################
-                            #if headerByQuestion!=1: # =1, um cabeçalho por questão
-                            #    defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
-                            #    arqprova.write("\n\\vspace{4mm}\n")
+                            if headerByQuestion!=1: # =1, um cabeçalho por questão
+                                defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
+                                arqprova.write("\n\\vspace{4mm}\n")
                         
-                            if headerByQuestion==0 and config['titPart3']!="\n":
-                                arqprova.write("\\begin{center}"+config['titPart3'].decode('utf-8').encode("latin1")+"\\end{center}\n")
+                            if config['titPart3']!="\n":
+                                arqprova.write("\\begin{center}\\textbf{"+config['titPart3'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
                             
-
-                            #arqprova.write("{\\large\n")
+                            arqprova.write("{\\small\n")
                             #arqprova.write("\\begin{questions}\n")
                             #arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
-                            headerFistPageOnly = True
                             for q in sorted(t[3]): # questões
                                 if q[1]==[]:
-                                    if (headerByQuestion==1 or headerFistPageOnly) and config['instructions3']!="\n": # um cabeçalho na página por questão
-                                        headerFistPageOnly = False
+                                    if headerByQuestion==1: # um cabeçalho na página por questão
                                         defineHeader(arqprova,strTurma,t[1],t[2])
-                                        
-                                        if config['instructions3']!="\n":
-                                            arqprova.write("\\\\{\\scriptsize\n\n\\noindent\\textbf{"+instrucoes+"}\\vspace{-1mm}\\begin{verbatim}\n")
-                                            arqprova.write(config['instructions3'].decode('utf-8').encode("latin1"))
-                                            arqprova.write("\\end{verbatim}}\n")
-                                
-                                        arqprova.write("\n\n\\vspace{1mm}")
-                                
-                                    #print q[0]
-                                    arqprova.write("{\n\n\\normalsize\\noindent %s }\n\n" % q[0].decode('utf-8').encode("latin1"))
-                                    #print ">>>>passou"
-                            arqprova.write("\n \ \ \\ \n \\newpage\n")
-                            #arqprova.write("\\question %s\n" % q[0].decode('utf-8').encode("latin1"))
+                                        arqprova.write("\n\n\\vspace{4mm}")
+                                    arqprova.write("\\noindent %s \n\n" % q[0].decode('utf-8').encode("latin1"))
+                                    arqprova.write("\n \ \ \\ \n \\newpage\n")
+                                    #arqprova.write("\\question %s\n" % q[0].decode('utf-8').encode("latin1"))
                             #arqprova.write("\\end{questions}\n")
-                            #arqprova.write("}\n")
-
+                            arqprova.write("}\n")
 
 
             arqprova.write("\\end{document}")
             arqprova.close() # final do arquivo
 
-def geraTex2PDF(provas):
+def createTex2PDF(provas):
     files = []
     for t in provas: # acha as turmas
         files.append(t[0])
@@ -709,7 +705,7 @@ def geraTex2PDF(provas):
         past = f[10:]
         arq = past[past.find(barra):]
         past = mypathTex+past[:past.find(barra)]
-        past += barra+pasteQuestion
+        past += barra+folderQuestions
         f = past+arq
         p = os.getcwd()
         os.chdir(p+past[1:])
@@ -725,11 +721,11 @@ def geraTex2PDF(provas):
         os.chdir(p)
                                        
 
-def getConfigLines(i, todaslinhas):
-    tam = len(todaslinhas)
-    while i < tam and todaslinhas[i]=='\n' and len(todaslinhas[i].split('::'))<2: # acha uma variável
+def getConfigLines(i, AllLines):
+    tam = len(AllLines)
+    while i < tam and AllLines[i]=='\n' and len(AllLines[i].split('::'))<2: # acha uma variável
         i += 1
-    v = todaslinhas[i].split('::')
+    v = AllLines[i].split('::')
     s = []
     v0 = v[0]
     v0 = v0.replace(' ','')
@@ -740,8 +736,8 @@ def getConfigLines(i, todaslinhas):
     ss = ss.replace('\t','')
     s.append(ss)
     i += 1
-    while i < tam and len(todaslinhas[i].split('::'))<2:
-        ss = todaslinhas[i]
+    while i < tam and len(AllLines[i].split('::'))<2:
+        ss = AllLines[i]
         ss = ss.lstrip()
         ss = ss.rstrip()
         ss = ss.replace('\t','')
@@ -750,49 +746,51 @@ def getConfigLines(i, todaslinhas):
     return (i,v0,'\n'.join([x for x in s]))
 
 def getConfig(file):
-    global config
+    global config, folderQuestions, folderCourse, randomTests, barra, MCTest_sheets, folderQuestions, folderCourse
+    global numQE, numQM, numQH, numQT, duplexPrinting, maxQuestQuadro, maxQuadrosHoz, headerByQuestion
+    global template
+
     arq = open(file)
-    todaslinhas = arq.readlines()
-    tam = len(todaslinhas)
+    AllLines = arq.readlines()
+    tam = len(AllLines)
     i = 0
     config = dict()
     while i<tam:
-        i, v, s = getConfigLines(i, todaslinhas)
+        i, v, s = getConfigLines(i, AllLines)
         config[v] = s
-
+        
+    numQE = int(config['numQE']) # num. questoes fáceis
+    numQM = int(config['numQM']) # num. questoes médias
+    numQH = int(config['numQH']) # num. questoes difíceis
+    numQT = int(config['numQT']) # num. questoes dissertativas
+    folderQuestions = config['folderQuestions'] # pasta com o bd de questões
+    folderCourse = config['folderCourse']
+    randomTests = int(config['randomTests'])
+    MCTest_sheets = int(config['MCTest_sheets'])
+    duplexPrinting = int(config['duplexPrinting'])
+    template = int(config['template'])
+    maxQuestQuadro = int(config['maxQuestQuadro'])
+    maxQuadrosHoz = int(config['maxQuadrosHoz'])
+    headerByQuestion = int(config['headerByQuestion'])
 
 def main():
-    global turmas, gabaritos, randomTests, barra, MCTest_sheets, pasteQuestion, pasteClasses
+    global turmas, gabaritos, randomTests, barra, MCTest_sheets, folderQuestions, folderCourse
     global numQE, numQM, numQH, numQT, duplexPrinting, maxQuestQuadro, maxQuadrosHoz, headerByQuestion
     global config
     
     try:
         if len(sys.argv)==2:
             getConfig(sys.argv[1]) # ler as variáveis de configuração e layout
-            numQE = int(config['numQE']) # num. questoes fáceis
-            numQM = int(config['numQM']) # num. questoes médias
-            numQH = int(config['numQH']) # num. questoes difíceis
-            numQT = int(config['numQT']) # num. questoes dissertativas
-            pasteQuestion = config['pasteQuestions'] # pasta com o bd de questões
-            pasteClasses = config['pasteClasses']
-            randomTests = int(config['randomTests'])
-            MCTest_sheets = int(config['MCTest_sheets'])
-            duplexPrinting = int(config['duplexPrinting'])
-            template = int(config['template'])
-            maxQuestQuadro = int(config['maxQuestQuadro'])
-            maxQuadrosHoz = int(config['maxQuadrosHoz'])
-            headerByQuestion = int(config['headerByQuestion'])
 
-
-            turmas = classesReadFiles(readClassFiles(pasteClasses))
+            turmas = classesReadFiles(readClassFiles(folderCourse))
             provas=[]
             gabaritos=[]
-            listao = questionsReadFiles(readQuestionsFiles(pasteQuestion))
+            listao = questionsReadFiles(readQuestionsFiles(folderQuestions))
             provas, gabaritos = createTests(listao, turmas)
             createTexTests(provas)
             if template!=0:
                 savesTemplates(gabaritos)
-            geraTex2PDF(provas)
+            createTex2PDF(provas)
 
     except ValueError:
         print "Oops!  Erro in File:",sys.argv[1], "Try again..."
@@ -800,5 +798,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-     
 
