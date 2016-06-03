@@ -1,0 +1,48 @@
+numQE	       :: 4	      :: number of easy questions
+numQM	       :: 3	      :: number of mean questions
+numQH	       :: 2	      :: number of hard questions
+numQT	       :: 2	      :: number of textual questions
+pasteCourse   :: course2016q2 :: folder containing the classes in csv files
+pasteQuestions :: testp1      :: folder containing the database issues in txt files
+randomTests    :: 1           :: =0, questions not random
+MCTest_sheets  :: 2	      :: =0 only answer sheet; =1 only questions; =2 cc
+template       :: 1	      :: =0, unsaved file with the templates *_GAB
+duplexPrinting :: 1	      :: =0, printing on one side of the sheet, cc, printing double-sided
+maxQuestQuadro :: 20	      :: maximum number of questions per answer sheet
+maxQuadrosHoz  :: 4	      :: maximum number of questions in horizontally
+headerByQuestion :: 1        :: =1 a header by textual question
+
+title          :: Universidade Federal do ABC
+course	       :: Processamento da Informação - BC0505
+teachers       :: Francisco de Assis Zampirolli
+period         :: 2/2016
+modality       :: Presencial
+date	       :: 22/06/2016
+logo	       :: ufabc.eps  :: logo in figs folder
+language       :: english   :: for now, portuguese or english
+
+instructions1 ::
+1. Paint only INSIDE OF THE CIRCLES of each question.  2. No Rasure. 3. Each question has only one correct answer.
+4. It will be considered only the answers in "Part 1" area on this page to the questions of multiple choice.
+
+instructions2 ::
+1. It is prohibited to search books and notes.  2. The use of electronic devices is prohibited. 3. It will be 
+considered only the answers in "Part 1" area of the Multiple-Choice Questions page.
+
+instructions3 ::
+
+titPart1 :: Parte 1 - Answer Sheet - Do not use this sheet as a draft!
+titPart2 :: Parte 2 - Multiple-Choice Questions
+titPart3 :: Parte 3 - Textual Questions
+
+endTable ::
+\begin{table}[h]
+\centering
+\textbf{Calculation of concepts} \\ \vspace{5mm}
+\begin{tabular}{|c|c|c|c|} \hline 
+Questions 1-12 & Textual Questions & Final\\ \hline 
+              & &  \\  
+              & &  \\ 
+              & &  \\ \hline 
+\end{tabular}
+\end{table}
