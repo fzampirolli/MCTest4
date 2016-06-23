@@ -4,7 +4,7 @@ numQH	       :: 0	      :: number of hard questions
 numQT	       :: 0	      :: number of textual questions
 folderCourse   :: course2016q2 :: folder containing the classes in csv files
 folderQuestions :: test200q      :: folder containing the database issues in txt files
-randomTests    :: 1           :: =0, questions not random
+randomTests    :: 1           :: =0, questions and answers not random
 MCTest_sheets  :: 2	      :: =0 only answer sheet; =1 only questions; =2 cc
 template       :: 1	      :: =0, unsaved file with the templates *_GAB
 duplexPrinting :: 1	      :: =0, printing on one side of the sheet, cc, printing double-sided
