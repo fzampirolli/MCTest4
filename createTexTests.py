@@ -611,7 +611,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                                 arqprova.write("       \\foreach \\letter/\\position in {%s} {\n" % strResps)
                                 #arqprova.write("           \\node[draw,fill,gray!80!white,inner sep=9pt] at (-0.5,0) {};\n")
                                 arqprova.write("           \\node at (-0.1,0) {\\line};\n")
-                                arqprova.write("           \\node[fill=black!30,draw,circle,inner sep=3pt] at ({\\position * 0.5},0) {};\n")
+                                arqprova.write("           \\node[fill=black!90,draw,circle,inner sep=3pt] at ({\\position * 0.5},0) {};\n")
                                 arqprova.write("           \\node[fill=white,draw,circle,inner sep=2pt] at ({\\position * 0.5},0) {};\n")
                                 arqprova.write("       }\n")
                                 arqprova.write("     \\end{scope}\n")
@@ -631,7 +631,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         arqprova.write(config['endTable'].decode('utf-8').encode("latin1"))
 
                         arqprova.write("\\newpage")
-                        if duplexPrinting!=0:
+                        if duplexPrinting=0:
                             arqprova.write("\\thispagestyle{empty}\\mbox{}\n \\ \ \n\\newpage\n")
             
                     if int(MCTest_sheets)!=0: # foi escolhido a opção de gerar somente a página de respostas
