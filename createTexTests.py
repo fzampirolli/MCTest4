@@ -573,7 +573,8 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
                         
                         arqprova.write("\\begin{pspicture}(6,0in)\n")
-                        arqprova.write("\\psbarcode[scalex=1.6,scaley=0.35]{%s}{}{ean13}\n" % str(t[1]).zfill(12)) #includetext
+                        arqprova.write("\\psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)")
+                        arqprova.write("\\psbarcode[scalex=1.6,scaley=0.35]{%s}{}{ean13}\n" % str(barcodeAluno).zfill(12)) #includetext
                         arqprova.write("\\end{pspicture}\n")
                         
                         
