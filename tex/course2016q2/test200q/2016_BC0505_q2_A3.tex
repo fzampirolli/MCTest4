@@ -57,7 +57,7 @@
 \vspace{8mm}
 \noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
 }\begin{pspicture}(6,0in)
-\psbarcode[scalex=1.6,scaley=0.35]{000011111111}{}{ean13}
+\psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)\psbarcode[scalex=1.6,scaley=0.35]{000011111111}{}{ean13}
 \end{pspicture}
 \\{\scriptsize
 
@@ -80,7 +80,7 @@
      \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -94,7 +94,7 @@
      \begin{scope}[xshift=0cm,yshift=-(\line-21+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -108,7 +108,7 @@
      \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -122,7 +122,7 @@
      \begin{scope}[xshift=0cm,yshift=-(\line-61+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -135,10 +135,7 @@
 
 \vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
 
-\newpage\thispagestyle{empty}\mbox{}
- \ \ 
-\newpage
-\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\newpage\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
 \makeatother
 \cleardoublepage
 \begin{table}[h]\centering
@@ -174,53 +171,71 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta d
 \choice resposta c
+\choice resposta a
 \choice resposta b
+\choice resposta d
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta c
-\choice resposta d
 \choice resposta e
+\choice resposta d
 \choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta a
+\choice resposta e
 \choice resposta d
+\choice resposta c
 \choice resposta b
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta b
 \choice resposta c
 \choice resposta d
-\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
 \choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta a
 \choice resposta b
+\choice resposta a
 \choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
+\choice resposta b
 \choice resposta a
+\choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
+\choice resposta a
 \choice resposta e
 \choice resposta b
 \choice resposta d
@@ -228,128 +243,128 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta a
 \choice resposta b
+\choice resposta e
 \choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta b
 \choice resposta c
 \choice resposta e
 \choice resposta a
-\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta d
-\choice resposta c
 \choice resposta b
+\choice resposta c
 \choice resposta a
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
+\choice resposta b
 \choice resposta a
-\choice resposta e
 \choice resposta c
-\choice resposta b
+\choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
+\choice resposta b
 \choice resposta e
+\choice resposta a
 \choice resposta d
 \choice resposta c
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
+\choice resposta c
 \choice resposta e
 \choice resposta b
-\choice resposta c
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta a
-\choice resposta d
 \choice resposta e
+\choice resposta d
 \choice resposta c
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta a
 \choice resposta d
 \choice resposta c
-\choice resposta b
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta a
-\choice resposta e
+\choice resposta d
 \choice resposta b
+\choice resposta e
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta c
 \choice resposta b
-\choice resposta d
 \choice resposta e
+\choice resposta a
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta a
 \choice resposta b
-\choice resposta d
 \choice resposta e
+\choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
 \choice resposta a
-\choice resposta d
 \choice resposta e
+\choice resposta d
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta e
+\choice resposta d
+\choice resposta b
 \choice resposta c
 \choice resposta a
-\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
+\choice resposta a
 \choice resposta d
-\choice resposta e
 \choice resposta c
-\choice resposta a
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -357,8 +372,8 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \choice resposta c
 \choice resposta d
 \choice resposta b
-\choice resposta a
 \choice resposta e
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -366,214 +381,205 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \choice resposta c
 \choice resposta b
 \choice resposta e
-\choice resposta a
 \choice resposta d
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta a
-\choice resposta c
 \choice resposta d
+\choice resposta c
+\choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta c
 \choice resposta b
+\choice resposta a
 \choice resposta e
 \choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
+\choice resposta d
 \choice resposta e
-\choice resposta b
 \choice resposta a
-\choice resposta d
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta b
+\choice resposta c
 \choice resposta e
-\choice resposta d
 \choice resposta a
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta d
-\choice resposta c
 \choice resposta a
 \choice resposta e
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
+\choice resposta d
 \choice resposta e
 \choice resposta c
-\choice resposta d
+\choice resposta b
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta a
 \choice resposta c
-\choice resposta d
+\choice resposta a
 \choice resposta b
+\choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
 \choice resposta e
+\choice resposta b
 \choice resposta c
 \choice resposta d
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta c
-\choice resposta b
 \choice resposta a
+\choice resposta d
 \choice resposta e
+\choice resposta b
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta b
-\choice resposta c
 \choice resposta a
+\choice resposta c
 \choice resposta e
+\choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta a
-\choice resposta b
 \choice resposta d
 \choice resposta c
+\choice resposta e
+\choice resposta b
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta c
 \choice resposta d
 \choice resposta a
 \choice resposta b
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta b
 \choice resposta a
+\choice resposta e
 \choice resposta c
 \choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
+\choice resposta e
+\choice resposta b
 \choice resposta a
 \choice resposta d
-\choice resposta b
-\choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
+\choice resposta c
 \choice resposta a
 \choice resposta e
-\choice resposta c
 \choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
 \choice resposta d
+\choice resposta a
 \choice resposta b
 \choice resposta e
-\choice resposta c
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
+\choice resposta b
 \choice resposta d
-\choice resposta e
 \choice resposta a
-\choice resposta b
+\choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
 \choice resposta a
-\choice resposta d
 \choice resposta e
 \choice resposta b
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta c
 \choice resposta d
-\choice resposta b
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta b
-\choice resposta e
+\choice resposta c
 \choice resposta a
 \choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
 \choice resposta e
-\choice resposta d
 \choice resposta b
+\choice resposta d
 \choice resposta c
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta a
 \choice resposta b
+\choice resposta e
 \choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta b
 \choice resposta e
 \choice resposta a
+\choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
@@ -581,33 +587,33 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
 \choice resposta d
+\choice resposta e
 \choice resposta b
 \choice resposta a
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
+\choice resposta d
 \choice resposta e
 \choice resposta a
-\choice resposta d
-\choice resposta b
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta d
-\choice resposta e
 \choice resposta c
+\choice resposta e
 \choice resposta b
+\choice resposta d
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta e
+\choice resposta b
 \choice resposta a
 \choice resposta c
 \choice resposta d
@@ -615,29 +621,29 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta b
-\choice resposta e
 \choice resposta a
 \choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta d
-\choice resposta a
+\choice resposta e
 \choice resposta b
 \choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
 \choice resposta b
 \choice resposta e
-\choice resposta d
 \choice resposta c
+\choice resposta a
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -645,8 +651,8 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \choice resposta c
 \choice resposta e
 \choice resposta b
-\choice resposta d
 \choice resposta a
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -654,41 +660,41 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \choice resposta c
 \choice resposta d
 \choice resposta a
-\choice resposta b
 \choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta b
-\choice resposta d
 \choice resposta e
 \choice resposta c
+\choice resposta a
+\choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
 \choice resposta c
 \choice resposta b
-\choice resposta d
-\choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
 \choice resposta d
 \choice resposta a
-\choice resposta e
 \choice resposta b
-\choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta a
+\choice resposta d
 \choice resposta c
 \choice resposta e
 \choice resposta b
@@ -697,61 +703,61 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta d
 \choice resposta a
 \choice resposta e
 \choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta d
-\choice resposta c
-\choice resposta a
 \choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta a
-\choice resposta e
 \choice resposta b
+\choice resposta d
 \choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta b
+\choice resposta e
 \choice resposta a
 \choice resposta c
-\choice resposta d
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
 \choice resposta e
 \choice resposta c
-\choice resposta b
-\choice resposta a
 \choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta a
-\choice resposta c
 \choice resposta b
+\choice resposta c
+\choice resposta e
 \choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta a
+\choice resposta b
 \choice resposta d
 \choice resposta c
 \choice resposta e
@@ -759,38 +765,29 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta e
-\choice resposta a
 \choice resposta c
 \choice resposta b
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta b
-\choice resposta a
 \choice resposta d
-\choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta b
 \choice resposta d
 \choice resposta c
 \choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta a
 \choice resposta e
+\choice resposta a
 \choice resposta b
 \choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -806,96 +803,87 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
 \choice resposta d
-\choice resposta c
 \choice resposta b
+\choice resposta c
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta e
 \choice resposta c
-\choice resposta b
 \choice resposta a
+\choice resposta b
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta a
-\choice resposta e
-\choice resposta b
 \choice resposta c
+\choice resposta b
+\choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta d
+\choice resposta b
 \choice resposta a
+\choice resposta d
+\choice resposta c
 \choice resposta e
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
 \choice resposta c
-\choice resposta b
 \choice resposta d
+\choice resposta b
+\choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
 \choice resposta a
 \choice resposta e
 \choice resposta d
-\choice resposta b
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta d
 \choice resposta c
 \choice resposta e
 \choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta a
 \choice resposta e
 \choice resposta b
-\choice resposta c
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
-\choice resposta b
 \choice resposta c
 \choice resposta a
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
 \choice resposta b
 \choice resposta a
-\choice resposta d
 \choice resposta c
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta e
+\choice resposta c
 \choice resposta a
 \choice resposta d
 \choice resposta b
@@ -904,116 +892,116 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
+\choice resposta b
+\choice resposta a
 \choice resposta c
 \choice resposta e
-\choice resposta a
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta e
-\choice resposta d
-\choice resposta a
+\choice resposta c
 \choice resposta b
+\choice resposta a
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
 \choice resposta a
 \choice resposta e
 \choice resposta c
-\choice resposta b
-\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta a
-\choice resposta b
 \choice resposta d
+\choice resposta b
 \choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta b
 \choice resposta c
 \choice resposta a
 \choice resposta d
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta e
+\choice resposta b
 \choice resposta c
+\choice resposta d
 \choice resposta a
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta b
 \choice resposta d
 \choice resposta a
+\choice resposta e
+\choice resposta b
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta b
-\choice resposta d
 \choice resposta e
+\choice resposta d
+\choice resposta c
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta e
 \choice resposta a
-\choice resposta c
 \choice resposta d
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
-\choice resposta b
+\choice resposta e
 \choice resposta d
+\choice resposta b
 \choice resposta a
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta d
 \choice resposta c
-\choice resposta b
+\choice resposta d
 \choice resposta e
+\choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta a
 \choice resposta b
-\choice resposta c
+\choice resposta d
 \choice resposta e
+\choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
-\choice resposta e
 \choice resposta a
+\choice resposta e
 \choice resposta c
 \choice resposta b
 \end{choices}
@@ -1022,9 +1010,18 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
 \choice resposta c
-\choice resposta b
+\choice resposta a
 \choice resposta e
+\choice resposta b
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta c
 \choice resposta a
+\choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -1038,37 +1035,37 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta c
 \choice resposta a
 \choice resposta b
-\choice resposta c
-\choice resposta d
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
 \choice resposta c
-\choice resposta e
 \choice resposta b
 \choice resposta d
-\choice resposta a
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta b
-\choice resposta c
 \choice resposta d
 \choice resposta a
+\choice resposta b
+\choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta b
 \choice resposta d
 \choice resposta a
+\choice resposta c
+\choice resposta b
 \choice resposta e
 \end{choices}
 \end{questions}
@@ -1096,7 +1093,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \vspace{8mm}
 \noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
 }\begin{pspicture}(6,0in)
-\psbarcode[scalex=1.6,scaley=0.35]{000011000000}{}{ean13}
+\psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)\psbarcode[scalex=1.6,scaley=0.35]{000011000000}{}{ean13}
 \end{pspicture}
 \\{\scriptsize
 
@@ -1119,7 +1116,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -1133,7 +1130,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-21+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -1147,7 +1144,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -1161,7 +1158,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-61+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -1174,10 +1171,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 
 \vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
 
-\newpage\thispagestyle{empty}\mbox{}
- \ \ 
-\newpage
-\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\newpage\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
 \makeatother
 \cleardoublepage
 \begin{table}[h]\centering
@@ -1213,29 +1207,29 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
+\choice resposta d
 \choice resposta b
-\choice resposta c
 \choice resposta e
-\choice resposta d
+\choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
 \choice resposta d
+\choice resposta c
 \choice resposta e
 \choice resposta b
-\choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta a
+\choice resposta c
 \choice resposta e
-\choice resposta d
 \choice resposta b
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -1249,63 +1243,63 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
 \choice resposta c
-\choice resposta b
 \choice resposta d
-\choice resposta a
-\choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta b
-\choice resposta c
 \choice resposta d
-\choice resposta e
 \choice resposta a
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta a
-\choice resposta d
 \choice resposta e
+\choice resposta b
 \choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta a
 \choice resposta c
 \choice resposta e
+\choice resposta d
+\choice resposta a
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta b
+\choice resposta c
 \choice resposta e
 \choice resposta d
-\choice resposta c
-\choice resposta b
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta e
-\choice resposta a
 \choice resposta c
 \choice resposta b
+\choice resposta d
+\choice resposta a
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
-\choice resposta e
 \choice resposta b
+\choice resposta e
 \choice resposta a
 \choice resposta d
 \end{choices}
@@ -1321,110 +1315,101 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta e
 \choice resposta d
-\choice resposta a
-\choice resposta c
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta c
 \choice resposta a
-\choice resposta d
 \choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta b
 \choice resposta d
 \choice resposta a
+\choice resposta e
+\choice resposta b
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
+\choice resposta a
 \choice resposta b
 \choice resposta c
+\choice resposta e
 \choice resposta d
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta d
-\choice resposta e
 \choice resposta c
+\choice resposta e
 \choice resposta a
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta c
-\choice resposta d
 \choice resposta e
 \choice resposta a
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta d
 \choice resposta a
-\choice resposta b
 \choice resposta c
+\choice resposta b
+\choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
+\choice resposta d
+\choice resposta c
 \choice resposta b
 \choice resposta a
-\choice resposta c
-\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
 \choice resposta c
 \choice resposta e
-\choice resposta a
-\choice resposta d
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
 \choice resposta a
 \choice resposta c
 \choice resposta b
-\choice resposta e
-\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
-\choice resposta b
-\choice resposta e
 \choice resposta a
+\choice resposta b
 \choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta c
 \choice resposta a
-\choice resposta b
 \choice resposta d
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -1439,160 +1424,169 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
+\choice resposta a
 \choice resposta d
-\choice resposta c
 \choice resposta e
-\choice resposta a
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
+\choice resposta a
 \choice resposta c
 \choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
+\choice resposta d
+\choice resposta c
 \choice resposta b
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta c
-\choice resposta d
 \choice resposta a
+\choice resposta d
+\choice resposta c
 \choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta a
 \choice resposta c
 \choice resposta b
-\choice resposta a
-\choice resposta d
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta e
 \choice resposta a
-\choice resposta c
 \choice resposta d
-\choice resposta b
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta a
-\choice resposta c
 \choice resposta b
 \choice resposta e
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta d
+\choice resposta b
 \choice resposta e
 \choice resposta a
-\choice resposta b
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta c
-\choice resposta b
 \choice resposta a
-\choice resposta d
+\choice resposta b
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta a
 \choice resposta e
-\choice resposta d
 \choice resposta b
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta a
 \choice resposta c
 \choice resposta d
+\choice resposta e
 \choice resposta b
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta a
 \choice resposta b
-\choice resposta c
+\choice resposta a
 \choice resposta d
+\choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta b
 \choice resposta d
 \choice resposta a
 \choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta b
-\choice resposta c
 \choice resposta d
+\choice resposta c
+\choice resposta b
+\choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta e
 \choice resposta c
-\choice resposta a
+\choice resposta e
 \choice resposta d
+\choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta a
-\choice resposta e
 \choice resposta c
-\choice resposta d
 \choice resposta b
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta e
 \choice resposta d
-\choice resposta c
 \choice resposta a
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta b
 \choice resposta c
 \choice resposta d
+\choice resposta e
+\choice resposta b
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta b
+\choice resposta c
 \choice resposta a
 \choice resposta e
 \choice resposta d
@@ -1601,54 +1595,63 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta d
 \choice resposta c
+\choice resposta d
 \choice resposta e
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
+\choice resposta e
+\choice resposta c
 \choice resposta a
 \choice resposta b
-\choice resposta c
-\choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
 \choice resposta b
+\choice resposta a
+\choice resposta e
 \choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
+\choice resposta b
 \choice resposta e
+\choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta d
-\choice resposta b
-\choice resposta e
 \choice resposta a
+\choice resposta c
+\choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
+\choice resposta c
 \choice resposta b
 \choice resposta d
-\choice resposta c
+\choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta b
 \choice resposta a
 \choice resposta d
+\choice resposta b
 \choice resposta c
 \end{choices}
 \question pergunta fácil
@@ -1656,206 +1659,206 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
 \choice resposta a
-\choice resposta d
 \choice resposta e
+\choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta d
 \choice resposta a
 \choice resposta c
+\choice resposta b
+\choice resposta d
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
-\choice resposta e
 \choice resposta a
 \choice resposta b
 \choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta b
 \choice resposta c
 \choice resposta d
 \choice resposta a
-\choice resposta e
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta e
 \choice resposta d
+\choice resposta e
 \choice resposta a
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta b
-\choice resposta a
 \choice resposta c
 \choice resposta d
+\choice resposta e
+\choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
+\choice resposta c
+\choice resposta b
 \choice resposta a
 \choice resposta d
-\choice resposta b
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
+\choice resposta b
 \choice resposta d
 \choice resposta c
-\choice resposta b
-\choice resposta a
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta c
 \choice resposta a
-\choice resposta b
+\choice resposta c
 \choice resposta e
+\choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta c
-\choice resposta d
 \choice resposta a
 \choice resposta e
-\choice resposta b
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta a
 \choice resposta c
 \choice resposta d
-\choice resposta b
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
 \choice resposta a
-\choice resposta e
 \choice resposta d
 \choice resposta b
-\choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta d
 \choice resposta b
 \choice resposta e
 \choice resposta a
+\choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta e
-\choice resposta c
 \choice resposta a
+\choice resposta e
 \choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta b
-\choice resposta e
-\choice resposta a
 \choice resposta d
+\choice resposta a
+\choice resposta e
+\choice resposta b
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
+\choice resposta d
 \choice resposta a
-\choice resposta c
 \choice resposta e
-\choice resposta d
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
 \choice resposta e
-\choice resposta d
-\choice resposta c
 \choice resposta a
+\choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
 \choice resposta c
+\choice resposta d
 \choice resposta e
 \choice resposta b
-\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
-\choice resposta e
-\choice resposta a
 \choice resposta b
+\choice resposta e
 \choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
+\choice resposta d
+\choice resposta b
 \choice resposta c
 \choice resposta e
-\choice resposta b
-\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta d
 \choice resposta c
+\choice resposta d
 \choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta c
-\choice resposta e
 \choice resposta d
+\choice resposta e
 \choice resposta a
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta b
 \choice resposta a
+\choice resposta b
 \choice resposta e
+\choice resposta c
 \choice resposta d
 \end{choices}
 \question pergunta fácil
@@ -1871,172 +1874,172 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
+\choice resposta e
 \choice resposta d
 \choice resposta a
-\choice resposta e
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta c
-\choice resposta b
 \choice resposta d
 \choice resposta a
+\choice resposta b
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
+\choice resposta a
 \choice resposta d
-\choice resposta b
 \choice resposta e
-\choice resposta a
+\choice resposta b
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
+\choice resposta a
 \choice resposta e
+\choice resposta b
 \choice resposta c
 \choice resposta d
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
 \choice resposta b
 \choice resposta d
 \choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
+\choice resposta d
 \choice resposta a
+\choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
-\choice resposta b
 \choice resposta a
 \choice resposta e
+\choice resposta b
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta d
-\choice resposta e
 \choice resposta c
+\choice resposta d
 \choice resposta b
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta a
 \choice resposta d
 \choice resposta e
 \choice resposta b
-\choice resposta c
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
 \choice resposta a
+\choice resposta c
 \choice resposta e
 \choice resposta d
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta e
 \choice resposta b
 \choice resposta d
-\choice resposta e
-\choice resposta a
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta b
 \choice resposta e
-\choice resposta c
 \choice resposta a
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta d
 \choice resposta c
-\choice resposta b
-\choice resposta a
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta a
 \choice resposta e
+\choice resposta a
+\choice resposta c
 \choice resposta b
 \choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta b
-\choice resposta e
 \choice resposta c
 \choice resposta a
+\choice resposta b
+\choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta c
 \choice resposta a
-\choice resposta d
+\choice resposta c
 \choice resposta b
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
 \choice resposta a
-\choice resposta d
 \choice resposta b
-\choice resposta e
-\choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta d
+\choice resposta e
 \choice resposta c
 \choice resposta b
-\choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
+\choice resposta e
+\choice resposta b
 \choice resposta c
 \choice resposta a
-\choice resposta b
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
 \choice resposta d
 \choice resposta b
-\choice resposta e
 \choice resposta c
-\choice resposta a
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -2050,65 +2053,56 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
 \choice resposta d
-\choice resposta a
 \choice resposta e
-\choice resposta b
-\choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta c
-\choice resposta b
-\choice resposta d
 \choice resposta a
-\choice resposta e
+\choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta b
 \choice resposta d
-\choice resposta c
-\choice resposta e
 \choice resposta a
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
+\choice resposta e
 \choice resposta c
 \choice resposta b
-\choice resposta e
 \choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta c
 \choice resposta d
-\choice resposta a
-\choice resposta e
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta e
-\choice resposta d
 \choice resposta a
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta e
 \choice resposta c
-\choice resposta a
 \choice resposta d
+\choice resposta e
+\choice resposta b
+\choice resposta a
 \end{choices}
 \end{questions}
 }
@@ -2135,7 +2129,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \vspace{8mm}
 \noindent\textbf{Ass:}\rule{11.5cm}{0.1pt}\hfill\hspace{1cm}
 }\begin{pspicture}(6,0in)
-\psbarcode[scalex=1.6,scaley=0.35]{000011000001}{}{ean13}
+\psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)\psbarcode[scalex=1.6,scaley=0.35]{000011000001}{}{ean13}
 \end{pspicture}
 \\{\scriptsize
 
@@ -2158,7 +2152,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -2172,7 +2166,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-21+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -2186,7 +2180,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -2200,7 +2194,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
      \begin{scope}[xshift=0cm,yshift=-(\line-61+1)*5mm]
        \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
            \node at (-0.1,0) {\line};
-           \node[fill=black!30,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=black!90,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
@@ -2213,10 +2207,7 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 
 \vspace{-3mm}\noindent\varhrulefill[0.4mm]\vspace{1mm}
 
-\newpage\thispagestyle{empty}\mbox{}
- \ \ 
-\newpage
-\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+\newpage\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
 \makeatother
 \cleardoublepage
 \begin{table}[h]\centering
@@ -2252,63 +2243,72 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta b
 \choice resposta e
+\choice resposta a
+\choice resposta d
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
 \choice resposta b
-\choice resposta a
 \choice resposta c
+\choice resposta e
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta c
-\choice resposta a
-\choice resposta b
 \choice resposta e
-\choice resposta d
+\choice resposta b
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta d
 \choice resposta e
+\choice resposta c
 \choice resposta a
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
 \choice resposta b
 \choice resposta e
-\choice resposta a
 \choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta d
-\choice resposta c
 \choice resposta b
+\choice resposta c
+\choice resposta a
 \choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta e
-\choice resposta c
-\choice resposta d
 \choice resposta a
+\choice resposta d
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
-\choice resposta b
 \choice resposta e
+\choice resposta b
 \choice resposta c
 \choice resposta a
 \end{choices}
@@ -2316,109 +2316,127 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
+\choice resposta a
 \choice resposta d
 \choice resposta b
 \choice resposta c
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
+\choice resposta e
 \choice resposta a
 \choice resposta d
 \choice resposta c
-\choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta b
-\choice resposta d
 \choice resposta c
 \choice resposta e
+\choice resposta b
+\choice resposta a
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
 \choice resposta a
-\choice resposta d
 \choice resposta b
 \choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta c
 \choice resposta b
-\choice resposta d
 \choice resposta e
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta d
+\choice resposta a
+\choice resposta b
+\choice resposta e
 \choice resposta c
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
+\choice resposta c
+\choice resposta d
 \choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta d
 \choice resposta e
 \choice resposta a
+\choice resposta d
+\choice resposta b
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
 \choice resposta d
 \choice resposta b
-\choice resposta c
 \choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c
+\choice resposta e
 \choice resposta d
 \choice resposta b
+\choice resposta a
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta c
 \choice resposta e
 \choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta e
-\choice resposta b
 \choice resposta d
+\choice resposta b
+\choice resposta e
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
+\choice resposta d
 \choice resposta a
 \choice resposta c
-\choice resposta d
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
+\choice resposta b
 \choice resposta c
 \choice resposta d
+\choice resposta a
 \choice resposta e
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
@@ -2426,132 +2444,132 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \choice resposta e
 \choice resposta c
 \choice resposta b
-\choice resposta d
 \choice resposta a
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta a
 \choice resposta e
 \choice resposta c
+\choice resposta a
+\choice resposta d
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta d
+\choice resposta e
 \choice resposta c
 \choice resposta b
-\choice resposta e
-\choice resposta d
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta e
-\choice resposta b
 \choice resposta a
+\choice resposta c
+\choice resposta b
 \choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta c
 \choice resposta e
+\choice resposta c
 \choice resposta a
 \choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta d
 \choice resposta b
-\choice resposta e
+\choice resposta d
+\choice resposta a
 \choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta c
+\choice resposta b
 \choice resposta d
-\choice resposta e
 \choice resposta a
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta b
-\choice resposta e
 \choice resposta c
 \choice resposta d
+\choice resposta b
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta e
 \choice resposta d
-\choice resposta a
 \choice resposta b
+\choice resposta a
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
+\choice resposta e
+\choice resposta d
 \choice resposta b
 \choice resposta a
-\choice resposta d
-\choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta d
-\choice resposta b
 \choice resposta c
 \choice resposta a
+\choice resposta b
+\choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
 \choice resposta b
-\choice resposta c
 \choice resposta d
 \choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta a
-\choice resposta d
 \choice resposta c
-\choice resposta e
 \choice resposta b
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
 \choice resposta d
 \choice resposta e
-\choice resposta b
 \choice resposta c
-\choice resposta a
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta c
 \choice resposta a
+\choice resposta e
 \choice resposta b
 \choice resposta d
 \end{choices}
@@ -2559,17 +2577,17 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta c
-\choice resposta b
 \choice resposta d
 \choice resposta a
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta c
 \choice resposta b
+\choice resposta c
+\choice resposta e
 \choice resposta a
 \choice resposta d
 \end{choices}
@@ -2577,45 +2595,45 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
+\choice resposta e
 \choice resposta d
 \choice resposta a
 \choice resposta c
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta a
+\choice resposta d
 \choice resposta c
+\choice resposta a
 \choice resposta b
-\choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
-\choice resposta e
+\choice resposta a
 \choice resposta d
 \choice resposta b
-\choice resposta a
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
+\choice resposta c
 \choice resposta d
 \choice resposta e
-\choice resposta c
 \choice resposta b
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta d
 \choice resposta e
 \choice resposta b
+\choice resposta c
 \choice resposta a
 \end{choices}
 \question pergunta fácil
@@ -2631,61 +2649,61 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
-\choice resposta e
-\choice resposta c
 \choice resposta b
 \choice resposta a
+\choice resposta e
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta b
+\choice resposta a
 \choice resposta e
 \choice resposta c
-\choice resposta a
+\choice resposta b
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta d
 \choice resposta a
 \choice resposta e
 \choice resposta b
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta d
-\choice resposta e
 \choice resposta a
+\choice resposta e
+\choice resposta d
 \choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
 \choice resposta b
-\choice resposta c
 \choice resposta e
+\choice resposta c
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta c
 \choice resposta a
-\choice resposta d
-\choice resposta e
 \choice resposta b
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta b
+\choice resposta e
 \choice resposta d
 \choice resposta a
 \choice resposta c
@@ -2693,461 +2711,434 @@ consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as q
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
 \choice resposta d
+\choice resposta a
 \choice resposta c
-\choice resposta e
 \choice resposta b
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta c
-\choice resposta e
 \choice resposta a
 \choice resposta d
+\choice resposta e
+\choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta d
-\choice resposta c
 \choice resposta b
 \choice resposta e
+\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta d
-\choice resposta e
-\choice resposta a
 \choice resposta b
+\choice resposta a
+\choice resposta c
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta b
-\choice resposta e
 \choice resposta a
+\choice resposta e
 \choice resposta c
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
 \choice resposta d
-\choice resposta c
 \choice resposta e
 \choice resposta b
+\choice resposta a
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
+\choice resposta b
 \choice resposta c
-\choice resposta a
 \choice resposta e
-\choice resposta b
+\choice resposta a
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta a
-\choice resposta e
 \choice resposta d
+\choice resposta e
+\choice resposta a
 \choice resposta b
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
 \choice resposta e
+\choice resposta a
 \choice resposta c
-\choice resposta d
 \choice resposta b
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta a
 \choice resposta e
 \choice resposta b
 \choice resposta d
+\choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d
+\choice resposta e
 \choice resposta a
 \choice resposta b
-\choice resposta e
-\choice resposta d
 \choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
-\choice resposta e
-\choice resposta d
 \choice resposta c
+\choice resposta d
+\choice resposta e
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta b
+\choice resposta c
 \choice resposta a
 \choice resposta d
-\choice resposta c
+\choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
 \choice resposta e
-\choice resposta a
-\choice resposta b
 \choice resposta d
+\choice resposta b
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta b
 \choice resposta a
+\choice resposta b
 \choice resposta e
 \choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta d
 \choice resposta e
-\choice resposta c
 \choice resposta a
+\choice resposta c
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
 \choice resposta e
-\choice resposta c
-\choice resposta b
+\choice resposta d
 \choice resposta a
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
-\choice resposta d
 \choice resposta b
-\choice resposta a
-\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta b
-\choice resposta d
 \choice resposta c
-\choice resposta e
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
 \choice resposta d
-\choice resposta c
-\choice resposta a
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta d
 \choice resposta a
 \choice resposta e
+\choice resposta c
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
-\choice resposta c
 \choice resposta e
+\choice resposta c
+\choice resposta a
 \choice resposta b
 \choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta b
-\choice resposta c
 \choice resposta a
+\choice resposta e
+\choice resposta c
 \choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta a
 \choice resposta c
 \choice resposta d
+\choice resposta a
 \choice resposta e
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta a
-\choice resposta d
+\choice resposta b
 \choice resposta c
 \choice resposta e
+\choice resposta d
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
 \choice resposta c
 \choice resposta d
 \choice resposta b
-\choice resposta e
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta c
-\choice resposta e
 \choice resposta b
-\choice resposta d
 \choice resposta a
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
 \choice resposta d
-\choice resposta a
-\choice resposta b
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
+\choice resposta c
 \choice resposta b
 \choice resposta a
 \choice resposta d
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
-\choice resposta a
 \choice resposta b
+\choice resposta e
 \choice resposta d
 \choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta c
 \choice resposta d
-\choice resposta e
 \choice resposta a
+\choice resposta b
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e
 \choice resposta a
+\choice resposta e
+\choice resposta c
 \choice resposta b
 \choice resposta d
-\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b
 \choice resposta c
-\choice resposta e
 \choice resposta a
 \choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta e
-\choice resposta d
 \choice resposta a
 \choice resposta c
+\choice resposta d
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
 \choice resposta d
-\choice resposta b
 \choice resposta c
+\choice resposta b
 \choice resposta e
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
+\choice resposta d
+\choice resposta c
+\choice resposta a
 \choice resposta e
+\end{choices}
+\question pergunta fácil
+\begin{choices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a
 \choice resposta c
+\choice resposta e
 \choice resposta d
-\choice resposta a
 \choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta a
-\choice resposta e
+\choice resposta d
 \choice resposta b
 \choice resposta c
-\choice resposta d
+\choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
+\choice resposta b
 \choice resposta e
 \choice resposta c
-\choice resposta b
 \choice resposta d
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta e
-\choice resposta a
 \choice resposta c
-\choice resposta b
 \choice resposta d
+\choice resposta b
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
 \choice resposta b
 \choice resposta d
-\choice resposta c
 \choice resposta e
+\choice resposta c
+\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta e
-\choice resposta c
 \choice resposta a
+\choice resposta c
 \choice resposta d
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
+\choice resposta b
 \choice resposta e
 \choice resposta a
+\choice resposta c
 \choice resposta d
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d
-\choice resposta b
 \choice resposta c
+\choice resposta b
 \choice resposta e
+\choice resposta d
 \choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
 \choice resposta a
-\choice resposta d
 \choice resposta b
+\choice resposta d
+\choice resposta c
 \choice resposta e
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b
 \choice resposta a
-\choice resposta c
 \choice resposta d
+\choice resposta c
 \choice resposta e
-\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta b
+\choice resposta d
 \choice resposta a
+\choice resposta b
 \choice resposta e
-\choice resposta d
+\choice resposta c
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e
+\choice resposta a
 \choice resposta c
 \choice resposta b
-\choice resposta e
 \choice resposta d
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c
-\choice resposta b
+\choice resposta a
 \choice resposta d
+\choice resposta b
+\choice resposta c
 \choice resposta e
-\choice resposta a
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
 \choice resposta d
-\choice resposta a
 \choice resposta e
+\choice resposta a
 \choice resposta c
+\choice resposta b
 \end{choices}
 \question pergunta fácil
 \begin{choices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b
-\choice resposta a
 \choice resposta d
 \choice resposta c
-\choice resposta e
-\end{choices}
-\question pergunta fácil
-\begin{choices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a
 \choice resposta b
+\choice resposta a
 \choice resposta e
-\choice resposta d
-\choice resposta c
 \end{choices}
 \end{questions}
 }

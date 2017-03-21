@@ -571,7 +571,9 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         ################# pagina de resposta - Parte 1 ##############
                         
                         defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
-                        
+
+                        barcodeAluno = t[1]
+
                         arqprova.write("\\begin{pspicture}(6,0in)\n")
                         arqprova.write("\\psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)")
                         arqprova.write("\\psbarcode[scalex=1.6,scaley=0.35]{%s}{}{ean13}\n" % str(barcodeAluno).zfill(12)) #includetext
@@ -632,7 +634,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         arqprova.write(config['endTable'].decode('utf-8').encode("latin1"))
 
                         arqprova.write("\\newpage")
-                        if duplexPrinting=0:
+                        if duplexPrinting==0:
                             arqprova.write("\\thispagestyle{empty}\\mbox{}\n \\ \ \n\\newpage\n")
             
                     if int(MCTest_sheets)!=0: # foi escolhido a opção de gerar somente a página de respostas
@@ -673,8 +675,10 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         if numQT>0:
                             ##################  questoes dissertativas - Parte 3 ##################
                             if headerByQuestion!=1: # =1, um cabeçalho por questão
+                                arqprova.write("\n \ \ \\ \n \\newpage\n")
                                 defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
                                 arqprova.write("\n\\vspace{4mm}\n")
+                                
                         
                             if config['titPart3']!="\n":
                                 arqprova.write("\\begin{center}\\textbf{"+config['titPart3'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
@@ -783,11 +787,12 @@ def main():
         if len(sys.argv)==2:
             getConfig(sys.argv[1]) # ler as variáveis de configuração e layout
 
+            turmas = classesReadFiles(readClassFiles(folderCourse))
+            
             if turmas==[]:
                 print "\n\nERRO: No txt file(s) with class(es) in folder:", folderCourse
                 sys.exit(0)
                 
-            turmas = classesReadFiles(readClassFiles(folderCourse))
             provas=[]
             gabaritos=[]
             listao = questionsReadFiles(readQuestionsFiles(folderQuestions))
