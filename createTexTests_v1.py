@@ -120,7 +120,7 @@ def questionsReadFiles(arquivos):
                 
                 if contRespostas==0:
                     print 'ERRO: questão sem respostas'
-                    sys.exit(0)
+                    sys.exit(-1)
                 
             d["a"] = respostas
                         
@@ -375,11 +375,11 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
     global instrucoes
 
     if config['language'].replace('\n','')=='portuguese':
-        turma = "\\textbf{Turma:} %s\n" %  strTurma
-        idAluno = "\\textbf{Matrícula:} %s\n" %  str(idAluno)
-        nomeAluno="\\textbf{Aluno:} %s\n" % nomeAluno
-        strAluno = "\\noindent"+nomeAluno+"\\hfill"+idAluno+"\\hfill"+turma+"\\hspace{-1mm}\n"
-        ass = "\\noindent\\textbf{Ass:}\\rule{11.5cm}{0.1pt}\\hfill\\hspace{1cm}\n"
+        turma = "\\textbf{Sala:} %s\n" %  strTurma
+        idAluno = "\\textbf{\\small{RA:}} %s\n" %  str(idAluno)
+        nomeAluno="\\textbf{\\small{Aluno:}} %s\n" % nomeAluno
+        strAluno = "\\noindent"+nomeAluno+"\\hfill"+idAluno+"\\hfill\\small{"+turma+"}\\hspace{-1mm}\n"
+        ass = "\\noindent\\textbf{Ass:}\\rule{11.15cm}{0.1pt}\\hfill\\hspace{1cm}\n"
         instrucoes = "Instru\\c c\\~oes: "
         course = "Disciplina:"
         teachers = "Professor(es):"
@@ -418,10 +418,10 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
     arqprova.write("\\textbf{"+date+"} "+config['date']+"\\hspace{-8mm}\\\\\n\hline")
     arqprova.write("\\end{tabular}\n")
     arqprova.write("\\end{table}\n")
-    arqprova.write("\\vspace{-4mm}\\small{\n"+strAluno.decode('utf-8').encode("latin1"))
+    arqprova.write("\\vspace{-4mm}\\Large{\n"+strAluno.decode('utf-8').encode("latin1"))
     arqprova.write("\n\\vspace{8mm}\n")
     arqprova.write(ass.decode('utf-8').encode("latin1"))
-    arqprova.write("}")
+    arqprova.write("}\\normalsize")
 
 
 def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
@@ -449,7 +449,12 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
         \usepackage{verbatim}
         \usepackage{tabularx}
         %\usepackage{moreverb}
-        \usepackage{times}
+        % Font selection
+        \usepackage[T1]{fontenc}
+        \usepackage{times} 
+        
+        \usepackage{multido}  % border
+
         %\usepackage{relsize}
         \usepackage{pst-barcode}
         \usepackage{tikz}
@@ -458,7 +463,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
         \setlength{\\evensidemargin}{0in}
         \setlength{\\columnsep}{8mm}
         \setlength{\\topmargin}{-28mm}
-        \setlength{\\textheight}{265mm}
+        \setlength{\\textheight}{272mm}
         \setlength{\\itemsep}{0in}
         \\begin{document}
         \\pagestyle{empty}
@@ -571,23 +576,22 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         ################# pagina de resposta - Parte 1 ##############
                         
                         defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
+
+                        barcodeAluno = t[1]
                         
+                        #print barcodeAluno
+                        
+                        #arqprova.write("\\multido{\n=1.50+0.05}{15}{%")
                         arqprova.write("\\begin{pspicture}(6,0in)\n")
                         arqprova.write("\\psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)")
                         arqprova.write("\\psbarcode[scalex=1.6,scaley=0.35]{%s}{}{ean13}\n" % str(barcodeAluno).zfill(12)) #includetext
                         arqprova.write("\\end{pspicture}\n")
                         
-                        
-                        if (config['instructions1']!="\n"):
-                            arqprova.write("\\\\{\\scriptsize\n\n\\noindent\\textbf{"+instrucoes+"}\\vspace{-1mm}\\begin{verbatim}\n")
-                            arqprova.write(config['instructions1'].decode('utf-8').encode("latin1"))
-                            arqprova.write("\\end{verbatim}\n")
-
                         if (config['titPart1']!="\n"):
-                            arqprova.write("\\begin{center}\\textbf{"+config['titPart1'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
+                            arqprova.write("\\vspace{-2mm}\\begin{center}\\textbf{"+config['titPart1'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
 
-                        arqprova.write("\\vspace{-5mm}\\noindent\\varhrulefill[0.4mm]\\vspace{1mm}\n\n")
                         arqprova.write("\\vspace{-3mm}\\noindent\\varhrulefill[0.4mm]\\vspace{1mm}\n\n")
+                        arqprova.write("\\vspace{-4mm}\\noindent\\varhrulefill[0.4mm]\\vspace{1mm}\n\n")
     
                         #print numQuestoes,numQuadros,numQuestoesQuadro, numResto
                         arqprova.write("\\begin{center}\n")
@@ -618,7 +622,7 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                                 arqprova.write("     \\end{scope}\n")
                                 arqprova.write("  }\n")
                                 arqprova.write("\\end{tikzpicture}\\hspace{%s cm}\n" % 1 )#(5-numQuadros))
-                            arqprova.write("\n\n")
+                            arqprova.write("\n")
 
 
                         arqprova.write("\\end{center}\n")
@@ -626,14 +630,21 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         
                         #arqprova.write("\\vspace{%s cm}\\noindent\\hrulefill\n\n" % saltaLinhas )
                         
-                        arqprova.write("\\vspace{1cm}\\noindent\\varhrulefill[0.4mm]\\vspace{1mm}\n\n")
-                        arqprova.write("\\vspace{-3mm}\\noindent\\varhrulefill[0.4mm]\\vspace{1mm}\n\n")
+                        arqprova.write("\\vspace{-2mm}\\noindent\\varhrulefill[0.4mm]\\vspace{1mm}\n\n")
+                        arqprova.write("\\vspace{-4mm}\\noindent\\varhrulefill[0.4mm]\\vspace{1mm}\n\n")
 
                         arqprova.write(config['endTable'].decode('utf-8').encode("latin1"))
 
-                        arqprova.write("\\newpage")
-                        if duplexPrinting=0:
-                            arqprova.write("\\thispagestyle{empty}\\mbox{}\n \\ \ \n\\newpage\n")
+                        if (config['instructions1']!="\n"):
+                            arqprova.write("\n \\vspace{3mm} {\\tiny \\textbf{"+instrucoes+"}\n")
+                            arqprova.write("\\vspace{-1mm}\\begin{verbatim}\n")
+                            arqprova.write(config['instructions1'].decode('utf-8').encode("latin1"))
+                            arqprova.write("\\end{verbatim}}\n")
+
+
+                        #arqprova.write("\\newpage")
+                        #if duplexPrinting==0:
+                        #    arqprova.write("\\thispagestyle{empty}\\mbox{}\n \\ \ \n\\newpage\n")
             
                     if int(MCTest_sheets)!=0: # foi escolhido a opção de gerar somente a página de respostas
  
@@ -641,18 +652,21 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
 
                         
                         if numQuestoes>0:
-                            defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
-                            arqprova.write("\n\\vspace{4mm}\n")
+                            #defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
+                            #arqprova.write("\n\\vspace{4mm}\n")
                             
-                            if (config['instructions2']!="\n"):
-                                arqprova.write("\\\\{\\scriptsize\n\n\\noindent\\textbf{"+instrucoes+"}\\vspace{-1mm}\\begin{verbatim}\n")
-                                arqprova.write(config['instructions2'].decode('utf-8').encode("latin1"))
-                                arqprova.write("\\end{verbatim}\n")
+                            #if (config['instructions2']!="\n"):
+                            #    arqprova.write("\\\\{\\scriptsize\n\n\\noindent\\textbf{"+instrucoes+"}\\vspace{-1mm}\\begin{verbatim}\n")
+                            #    arqprova.write(config['instructions2'].decode('utf-8').encode("latin1"))
+                            #    arqprova.write("\\end{verbatim}\n")
                         
                             if (config['titPart2']!="\n"):
-                                arqprova.write("\\begin{center}\\textbf{"+config['titPart2'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
+                                arqprova.write("\\vspace{2mm}{\\normalsize\\noindent\\textbf{"+config['titPart2'].decode('utf-8').encode("latin1")+"}}\n")
+
+                            #if (config['titPart2']!="\n"):
+                            #    arqprova.write("\\begin{center}\\textbf{"+config['titPart2'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
                                 
-                            arqprova.write("{\\small\n")
+                            arqprova.write("{\\normalsize\n")
                             arqprova.write("\\begin{questions}\n")
                             arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
                             for q in t[3]: # questões
@@ -660,26 +674,26 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                                     qstr = q[0]
                                     #print ">>>",qstr
                                     arqprova.write("\\question %s\n" % qstr.decode('utf-8').encode("latin1"))
-                                    arqprova.write("\\begin{choices}\n") #oneparchoices - choice
+                                    arqprova.write("\\begin{oneparchoices}\n") #oneparchoices - choice
                                     arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
                                     for r in q[1]: # respostas
                                         #print ">>",r
-                                        arqprova.write("\\choice %s\n" % r.decode('utf-8').encode("latin1"))
-                                    arqprova.write("\\end{choices}\n")
+                                        arqprova.write("\\choice %s" % r.decode('utf-8').encode("latin1"))
+                                    arqprova.write("\\end{oneparchoices}\\vspace{0mm}\n")
                             arqprova.write("\\end{questions}\n")
                             arqprova.write("}")
-                            arqprova.write("\n \ \ \\ \n \\newpage\n")
+                            #arqprova.write("\n \ \ \\ \n \\newpage\n")
 
                         if numQT>0:
                             ##################  questoes dissertativas - Parte 3 ##################
-                            if headerByQuestion!=1: # =1, um cabeçalho por questão
-                                defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
-                                arqprova.write("\n\\vspace{4mm}\n")
+                            #if headerByQuestion!=1: # =1, um cabeçalho por questão
+                            #    defineHeader(arqprova,strTurma,t[1],t[2]) # cabeçalho da página
+                            #    arqprova.write("\n\\vspace{4mm}\n")
                         
                             if config['titPart3']!="\n":
-                                arqprova.write("\\begin{center}\\textbf{"+config['titPart3'].decode('utf-8').encode("latin1")+"}\\end{center}\n")
+                                arqprova.write("\\vspace{2mm}{\\normalsize\\noindent\\textbf{"+config['titPart3'].decode('utf-8').encode("latin1")+"}}\\\\\n")
                             
-                            arqprova.write("{\\small\n")
+                            arqprova.write("{\\normalsize\n")
                             #arqprova.write("\\begin{questions}\n")
                             #arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
                             for q in sorted(t[3]): # questões
@@ -783,21 +797,23 @@ def main():
         if len(sys.argv)==2:
             getConfig(sys.argv[1]) # ler as variáveis de configuração e layout
 
+            turmas = classesReadFiles(readClassFiles(folderCourse))
+            
             if turmas==[]:
                 print "\n\nERRO: No txt file(s) with class(es) in folder:", folderCourse
                 sys.exit(0)
-                
-            turmas = classesReadFiles(readClassFiles(folderCourse))
+
             provas=[]
             gabaritos=[]
             listao = questionsReadFiles(readQuestionsFiles(folderQuestions))
-
+            
             if listao==[]:
                 print "\n\nERRO: No csv file(s) with question(s) in folder:", folderQuestions
                 sys.exit(0)
 
             print "\n\nRequered: ","numQE =",numQE, "numQM =", numQM, "numQH =", numQH, "numQT =", numQT
-            
+
+                
             provas, gabaritos = createTests(listao, turmas)
             createTexTests(provas)
             if template!=0:

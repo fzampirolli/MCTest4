@@ -10,7 +10,7 @@ template       :: 1	      :: =0, unsaved file with the templates *_GAB
 duplexPrinting :: 1	      :: =0, printing on one side of the sheet, cc, printing double-sided
 maxQuestQuadro :: 20	      :: maximum number of questions per answer sheet
 maxQuadrosHoz  :: 4	      :: maximum number of questions in horizontally
-headerByQuestion :: 1        :: =1 a header by textual question
+headerByQuestion :: 0        :: =1 a header by textual question
 
 title          :: Universidade Federal do ABC
 course	       :: Processamento da Informação - BC0505
