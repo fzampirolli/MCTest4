@@ -1,18 +1,3 @@
-QE::assunto 1 - assunto 10::a:: pergunta fácil Q1a1 - com a primeira variação da subclasse a: 
-A: resposta 1a1-a 
-A: resposta 1a1-b
-A: resposta 1a1-c
-A: resposta 1a1-d
-A: resposta 1a1-e
-
-QE::assunto 1 - assunto 10::a:: pergunta fácil Q1a2 - com segunda variações da subclasse a: 
-A: resposta 
-1a2-a 
-A: resposta 1a2-b
-A: resposta 1a2-c
-A: resposta 1a2-d
-A: resposta 1a2-e
-
 QE::assunto 1::b:: pergunta fácil Q1b1 - com primeira variações da subclasse b: 
 A: resposta 1b1-a 
 A: resposta 1b1-b

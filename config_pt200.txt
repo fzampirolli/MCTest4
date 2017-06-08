@@ -1,4 +1,4 @@
-numQE	       :: 100	      :: number of easy questions
+numQE	       :: 160	      :: number of easy questions
 numQM	       :: 0	      :: number of mean questions
 numQH	       :: 0	      :: number of hard questions
 numQT	       :: 0	      :: number of textual questions
@@ -8,7 +8,7 @@ randomTests    :: 1           :: =0, questions and answers not random
 MCTest_sheets  :: 2	      :: =0 only answer sheet; =1 only questions; =2 cc
 template       :: 1	      :: =0, unsaved file with the templates *_GAB
 duplexPrinting :: 1	      :: =0, printing on one side of the sheet, cc, printing double-sided
-maxQuestQuadro :: 20	      :: maximum number of questions per answer sheet
+maxQuestQuadro :: 40	      :: maximum number of questions per answer sheet
 maxQuadrosHoz  :: 4	      :: maximum number of questions in horizontally
 headerByQuestion :: 1        :: =1 a header by textual question
 
@@ -22,12 +22,15 @@ logo	       :: ufabc.eps   :: logo in figs folder
 language       :: portuguese  :: for now, Portuguese or English
 
 instructions1 ::
-1. Pinte somente DENTRO DOS CÍRCULOS de cada questão.  2. Não rasure.  3. Cada questão possui uma única resposta correta.
-4. Somente serão consideradas as respostas na região "Parte 1" desta página para as questões de múltipla-escolha.
+\item Pinte somente DENTRO DOS CÍRCULOS de cada questão.  
+\item Não rasure.  
+\item Cada questão possui uma única resposta correta.
+\item Somente serão consideradas as respostas na região "Parte 1" desta página para as questões de múltipla-escolha.
 
 instructions2 ::
-1. Proibida a consulta de livros ou anotações.  2. Proibido o uso de dispositivos eletrônicos. 3. Somente serão
-consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
+\item Proibida a consulta de livros ou anotações.  
+\item Proibido o uso de dispositivos eletrônicos. 
+\item Somente serão consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
 
 instructions3 ::
 

@@ -22,12 +22,15 @@ logo	       :: ufabc.eps  :: logo in figs folder
 language       :: english   :: for now, portuguese or english
 
 instructions1 ::
-1. Paint only INSIDE OF THE CIRCLES of each question.  2. No Rasure. 3. Each question has only one correct answer.
-4. It will be considered only the answers in "Part 1" area on this page to the questions of multiple choice.
+\item Paint only INSIDE OF THE CIRCLES of each question.  
+\item No Rasure. 
+\item Each question has only one correct answer.
+\item It will be considered only the answers in "Part 1" area on this page to the questions of multiple choice.
 
 instructions2 ::
-1. It is prohibited to search books and notes.  2. The use of electronic devices is prohibited. 3. It will be 
-considered only the answers in "Part 1" area of the Multiple-Choice Questions page.
+\item It is prohibited to search books and notes.  
+\item The use of electronic devices is prohibited. 
+\item It will be considered only the answers in "Part 1" area of the Multiple-Choice Questions page.
 
 instructions3 ::
 

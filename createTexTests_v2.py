@@ -4,6 +4,12 @@
 
 import random, sys, os, os.path, glob, csv, socket, string, smtplib
 
+import sympy
+from sympy.solvers import solve
+import re
+import compiler, parser
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from unicodedata import normalize # retirar acentuação
@@ -56,6 +62,22 @@ def getAnswer(i, AllLines):
         i += 1
     return (i,' '.join([x for x in q]))
 
+def get_Equations(s):
+    #s = "um exemplo $*$ x, y = symbols('x,y') :: sin(x+y).expand(trig=True) $*$, outro exemplo $*$ :: b = y - x $*$ fim!"
+    # cada equacao tem ter duas partes, uma para definir as variáveis, que vai ser mostrado no enunciado da questao
+    # a segunda parte é a equação propriamente dita
+    
+
+    eq_str = '$*$'
+    s1 = s.partition(eq_str)
+
+    eq = []
+    while len(s1)==3 and s1[2]!='':
+        s2 = s1[2].partition(eq_str)
+        if s2[1]!='':
+            eq.append(s2[0])
+            s1 = s2[2].partition(eq_str)
+    return eq
 
 def questionsReadFiles(arquivos):
     # estados possiveis: fora de alguma questao
@@ -100,7 +122,7 @@ def questionsReadFiles(arquivos):
                 d["q"] = vet[2].strip()
                 d["st"] = ''
             elif len(vet)==4: # subtipo da questão, um caracter qualquer
-                d["t"] = vet[0]  # tipo QT, QE, QM ou QH
+                d["t"] = vet[0] 
                 s = normalize('NFKD', vet[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
                 d["c"] = s
                 d["st"] = vet[2]
@@ -108,9 +130,13 @@ def questionsReadFiles(arquivos):
             
             d["n"] = questnum
             d["arq"] = arqnum
+
+            eq = []
+            if "q" in d.keys():
+                eq = get_Equations(d["q"])
             
             respostas = []
-            if d["t"] != "QT":
+            if d["t"] != "QT" and eq == []:
                 contRespostas = 0
                 while i < tam and AllLines[i][:AllLines[i].find(':')] in ['A']:
                     i, r = getAnswer(i,AllLines)
@@ -120,7 +146,51 @@ def questionsReadFiles(arquivos):
                 
                 if contRespostas==0:
                     print 'ERRO: questão sem respostas'
-                    sys.exit(-1)
+                    sys.exit(0)
+                    
+            elif eq != []:
+
+
+
+
+
+
+
+
+                
+                print '>>>>>>TRATAR AQUI QUANDO A QUESTÃO TEM EQUAÇÃO'
+                for eqi in eq:
+                    p1,p2 = eqi.split(':$:')
+  
+                    print p1, p2
+                    
+                    #from sympy.abc import a, b, c
+                    #from sympy.parsing.sympy_parser import parse_expr
+                    #sympy_exp = parse_expr(p2)
+                    #print sympy_exp.evalf(subs={a:6, b:5, c:2})
+
+                    #from sympy import Symbol
+                    #x = Symbol('x')
+                    #S(p1)
+                    #print eval(p2)
+
+                    from sympy import sympify, solve, Symbol,pprint
+
+                    #x = Symbol('x')
+                    
+                    expr = sympify(p2)
+                    print 2*expr
+                    print solve(expr)
+                
+                contRespostas = 0
+                while contRespostas < 5:
+                    contRespostas +=  1
+                    respostas.append(str(contRespostas))
+
+
+
+                    
+                
                 
             d["a"] = respostas
                         
@@ -160,8 +230,8 @@ def createListTypes(listao,tipo,numQ):
 
     if numQ > len(questTipo):
         print "number of available questions %s: \t %-5d" % (tipo, len(questTipo))
-        print "\nERRO: number of solicitous questions is incompatible with the number of available questions\n"
-        sys.exit(-1)
+        print "\nERRO: number of requered questions is incompatible with the number of available questions\n"
+        sys.exit(0)
     
     return questTipo
 
@@ -302,7 +372,7 @@ def classesReadFiles(files):
         with open(fi, 'rb') as f:
             reader = csv.reader(f, delimiter=';')
             for row in reader:
-                print ">>>>", row
+                #print ">>>>", row
                 s = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
                 alunos.append([fi,row[0],s])
         print "read the class file: %-40s with %d students" % (fi,len(alunos))
@@ -636,10 +706,12 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
                         arqprova.write(config['endTable'].decode('utf-8').encode("latin1"))
 
                         if (config['instructions1']!="\n"):
-                            arqprova.write("\n \\vspace{3mm} {\\small \\textbf{"+instrucoes+"}\n")
-                            arqprova.write("\\vspace{-1mm}\\begin{itemize}\\itemsep0pt\\parskip0pt\\parsep0pt\n")
+                            arqprova.write("\n\n \\vspace{5mm} {\\small \\noindent \\textbf{"+instrucoes+"}\n")
+                            arqprova.write("\\vspace{-1mm}\\begin{enumerate}[label=\\alph*)]\n")
+                            arqprova.write("\\itemsep0pt\\parskip0pt\\parsep0pt\n")
                             arqprova.write(config['instructions1'].decode('utf-8').encode("latin1"))
-                            arqprova.write("\\end{itemize}}\n")
+                            arqprova.write("\\end{enumerate}\n")
+                
 
 
                         #arqprova.write("\\newpage")
@@ -798,9 +870,22 @@ def main():
             getConfig(sys.argv[1]) # ler as variáveis de configuração e layout
 
             turmas = classesReadFiles(readClassFiles(folderCourse))
+            
+            if turmas==[]:
+                print "\n\nERRO: No txt file(s) with class(es) in folder:", folderCourse
+                sys.exit(0)
+
             provas=[]
             gabaritos=[]
             listao = questionsReadFiles(readQuestionsFiles(folderQuestions))
+            
+            if listao==[]:
+                print "\n\nERRO: No csv file(s) with question(s) in folder:", folderQuestions
+                sys.exit(0)
+
+            print "\n\nRequered: ","numQE =",numQE, "numQM =", numQM, "numQH =", numQH, "numQT =", numQT
+
+                
             provas, gabaritos = createTests(listao, turmas)
             createTexTests(provas)
             if template!=0:

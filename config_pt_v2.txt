@@ -1,7 +1,7 @@
-numQE	       :: 4	      :: number of easy questions
-numQM	       :: 3	      :: number of mean questions
-numQH	       :: 2	      :: number of hard questions
-numQT	       :: 2	      :: number of textual questions
+numQE	       :: 1	      :: number of easy questions
+numQM	       :: 0	      :: number of mean questions
+numQH	       :: 0	      :: number of hard questions
+numQT	       :: 0	      :: number of textual questions
 folderCourse   :: course2016q2 :: folder containing the classes in csv files
 folderQuestions :: testp1      :: folder containing the database issues in txt files
 randomTests    :: 1           :: =0, questions and answers  not random
@@ -30,7 +30,8 @@ instructions1 ::
 instructions2 ::
 \item Proibida a consulta de livros ou anotações.  
 \item Proibido o uso de dispositivos eletrônicos. 
-\item Somente serão consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
+\item Somente serão
+consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
 
 instructions3 ::
 
@@ -39,13 +40,13 @@ titPart2 :: Parte 2 - Questões de Múltipla-Escolha
 titPart3 :: Parte 3 - Questões Dissertativas
 
 endTable ::
-%\begin{table}[h]
-%\centering
-%\textbf{Cálculo dos Conceitos} \\ \vspace{5mm}
-%\begin{tabular}{|c|c|c|c|} \hline 
-%Questões 1-12 & Questão Dissertativa & Final\\ \hline 
-%              & &  \\  
-%              & &  \\ 
-%              & &  \\ \hline 
-%\end{tabular}
-%\end{table}
+\begin{table}[h]
+\centering
+\textbf{Cálculo dos Conceitos} \\ \vspace{5mm}
+\begin{tabular}{|c|c|c|c|} \hline 
+Questões 1-12 & Questão Dissertativa & Final\\ \hline 
+              & &  \\  
+              & &  \\ 
+              & &  \\ \hline 
+\end{tabular}
+\end{table}
