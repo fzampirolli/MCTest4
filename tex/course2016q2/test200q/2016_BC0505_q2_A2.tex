@@ -69,71 +69,146 @@
 \psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)\psbarcode[scalex=1.6,scaley=0.35]{000011000123}{}{ean13}
 \end{pspicture}
 \vspace{-2mm}\begin{center}\textbf{Parte 1 - Quadro(s) de Respostas - Não utilize esta FOLHA como rascunho!}\end{center}
-\begin{center}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {1,...,40} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\begin{center}  \begin{tabular}{l} 
+\vspace{0mm}\vspace{-4mm}\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {1,...,10} {
+    \node[inner sep=3pt] at ({(\numLab-1+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {41,...,80} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {11,...,20} {
+    \node[inner sep=3pt] at ({(\numLab-11+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {81,...,120} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-81+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {21,...,30} {
+    \node[inner sep=3pt] at ({(\numLab-21+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {121,...,160} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-121+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\end{tikzpicture}\hspace{0 mm}
+
+ \\ \\ 
+\vspace{-4mm}\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {31,...,40} {
+    \node[inner sep=3pt] at ({(\numLab-31+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {41,...,50} {
+    \node[inner sep=3pt] at ({(\numLab-41+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {51,...,60} {
+    \node[inner sep=3pt] at ({(\numLab-51+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
 
-\end{center}
+ \\ \\ 
+\vspace{-4mm}\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {61,...,70} {
+    \node[inner sep=3pt] at ({(\numLab-61+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {71,...,80} {
+    \node[inner sep=3pt] at ({(\numLab-71+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {81,...,90} {
+    \node[inner sep=3pt] at ({(\numLab-81+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+
+ \\ \\ 
+\end{tabular}\end{center}
 
 
-\vspace{-5mm}
-\leavevmode\put(-24,0){\color{black}\circle*{15}}\hspace{-5mm}  \leavevmode\put(535,0){\color{black}\circle*{15}}
+\vspace{2mm}
+\leavevmode\put(-24,0){\color{black}\circle*{15}}\hspace{-5mm}\hrulefill  \leavevmode\put(10,0){\color{black}\circle*{15}}
 
- \vspace{5mm} {\small \noindent \textbf{Instru\c c\~oes: }
+ \vspace{7mm} {\small \noindent \textbf{Instru\c c\~oes: }
 \vspace{-1mm}\begin{enumerate}[label=\alph*)]
 \itemsep0pt\parskip0pt\parsep0pt
 
@@ -149,295 +224,7 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta b\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta a\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta a\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta c\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta e\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta e\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta c\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta d\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta b\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta c\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta b\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta c\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta e\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta a\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta a\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta c\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta a\choice resposta c\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta c\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta d\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta b\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta a\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta a\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta a\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -445,151 +232,7 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta b\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta b\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta c\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta c\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta e\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta d\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta c\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta a\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta d\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta b\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta c\choice resposta b\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -597,99 +240,35 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta b\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\choice resposta d\choice resposta a\choice resposta b\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta c\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta d\choice resposta e\choice resposta b\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
+\choice resposta e\choice resposta a\choice resposta d\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta b\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
+\choice resposta c\choice resposta d\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta c\choice resposta b\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta d\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta c\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta e\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta b\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta b\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta a\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta b\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\choice resposta d\choice resposta c\choice resposta e\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -701,79 +280,19 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta a\choice resposta e\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta d\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
+\choice resposta a\choice resposta e\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\choice resposta c\choice resposta d\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta e\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta c\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta b\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta a\choice resposta b\choice resposta c\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -781,13 +300,291 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta a\choice resposta c\choice resposta b\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta b\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
+\choice resposta e\choice resposta a\choice resposta b\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta e\choice resposta c\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta a\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta b\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta b\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta b\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta d\choice resposta e\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta a\choice resposta d\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta b\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta c\choice resposta b\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta c\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta e\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta b\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta e\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta c\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta e\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta c\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta a\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta d\choice resposta b\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta d\choice resposta e\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta c\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta e\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta e\choice resposta d\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta e\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta d\choice resposta b\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta c\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta b\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta b\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta c\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta b\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta b\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta b\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta d\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta d\choice resposta c\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta e\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta d\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta e\choice resposta b\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta c\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
 \end{questions}
-}\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
+}
+\ \ \newpage
+\makeatletter\renewcommand*\cleardoublepage{\ifodd\c@page \else\hbox{}\newpage\fi}
 \makeatother
 \cleardoublepage
 \begin{table}[h]\centering
@@ -815,71 +612,146 @@
 \psframe[linecolor=black,fillstyle=solid,fillcolor=white](-0.4,-0.2)(5.7,1.1)\psbarcode[scalex=1.6,scaley=0.35]{000011000111}{}{ean13}
 \end{pspicture}
 \vspace{-2mm}\begin{center}\textbf{Parte 1 - Quadro(s) de Respostas - Não utilize esta FOLHA como rascunho!}\end{center}
-\begin{center}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {1,...,40} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-1+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\begin{center}  \begin{tabular}{l} 
+\vspace{0mm}\vspace{-4mm}\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {1,...,10} {
+    \node[inner sep=3pt] at ({(\numLab-1+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {41,...,80} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-41+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {11,...,20} {
+    \node[inner sep=3pt] at ({(\numLab-11+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {81,...,120} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-81+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {21,...,30} {
+    \node[inner sep=3pt] at ({(\numLab-21+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
-\begin{tikzpicture}[font=\tiny]
-  \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-    \node[inner sep=3pt] at ({\position * 0.5},0) {\letter};
-  }
-  \foreach \line in {121,...,160} {
-     \begin{scope}[xshift=0cm,yshift=-(\line-121+1)*5mm]
-       \foreach \letter/\position in {A/1,B/2,C/3,D/4,E/5} {
-           \node at (-0.1,0) {\line};
+\end{tikzpicture}\hspace{0 mm}
+
+ \\ \\ 
+\vspace{-4mm}\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {31,...,40} {
+    \node[inner sep=3pt] at ({(\numLab-31+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
            \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
            \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
        }
      \end{scope}
   }
-\end{tikzpicture}\hspace{1 cm}
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {41,...,50} {
+    \node[inner sep=3pt] at ({(\numLab-41+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {51,...,60} {
+    \node[inner sep=3pt] at ({(\numLab-51+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
 
-\end{center}
+ \\ \\ 
+\vspace{-4mm}\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {61,...,70} {
+    \node[inner sep=3pt] at ({(\numLab-61+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {71,...,80} {
+    \node[inner sep=3pt] at ({(\numLab-71+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+\hspace{2mm}\begin{tikzpicture}[font=\tiny]
+  \foreach \numLab in {81,...,90} {
+    \node[inner sep=3pt] at ({(\numLab-81+1) * 0.5},0) {\numLab};
+  }\vspace{-1mm}
+  \foreach \letter/\line in {A/1,B/2,C/3,D/4,E/5} {
+     \begin{scope}[xshift=0cm,yshift=-(\line)*5mm]
+       \node at (0.1,0) {\letter};
+       \foreach \letter/\position in {1,...,10} {
+           \node[fill=black!100,draw,circle,inner sep=3pt] at ({\position * 0.5},0) {};
+           \node[fill=white,draw,circle,inner sep=2pt] at ({\position * 0.5},0) {};
+       }
+     \end{scope}
+  }
+\end{tikzpicture}\hspace{0 mm}
+
+ \\ \\ 
+\end{tabular}\end{center}
 
 
-\vspace{-5mm}
-\leavevmode\put(-24,0){\color{black}\circle*{15}}\hspace{-5mm}  \leavevmode\put(535,0){\color{black}\circle*{15}}
+\vspace{2mm}
+\leavevmode\put(-24,0){\color{black}\circle*{15}}\hspace{-5mm}\hrulefill  \leavevmode\put(10,0){\color{black}\circle*{15}}
 
- \vspace{5mm} {\small \noindent \textbf{Instru\c c\~oes: }
+ \vspace{7mm} {\small \noindent \textbf{Instru\c c\~oes: }
 \vspace{-1mm}\begin{enumerate}[label=\alph*)]
 \itemsep0pt\parskip0pt\parsep0pt
 
@@ -899,119 +771,7 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta e\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta c\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta b\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta c\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta e\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta a\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta d\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta e\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\choice resposta e\choice resposta b\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -1019,275 +779,11 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta a\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta b\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta a\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta c\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta e\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta b\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta a\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta b\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta d\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta b\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta b\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta d\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta c\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta d\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta d\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta b\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta a\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta e\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta a\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta a\choice resposta e\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
 \choice resposta b\choice resposta a\choice resposta d\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -1295,191 +791,23 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta e\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta c\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta b\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta a\choice resposta d\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta b\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta c\choice resposta a\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta d\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta a\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta c\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta b\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta e\choice resposta d\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta a\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta c\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta e\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta e\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta c\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta a\choice resposta d\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta e\choice resposta b\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta e\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta a\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta c\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta c\choice resposta b\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta d\choice resposta a\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta b\choice resposta c\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta a\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta a\choice resposta e\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta e\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
-\question pergunta fácil
-\begin{oneparchoices}
-\itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta a\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta a\choice resposta c\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -1487,27 +815,87 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta a\choice resposta d\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta a\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
+\choice resposta e\choice resposta d\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta d\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta a\choice resposta c\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta b\choice resposta c\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta d\choice resposta b\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta d\choice resposta b\choice resposta e\choice resposta c\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta a\choice resposta c\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta b\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta b\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta b\choice resposta d\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta e\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta a\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta c\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta e\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -1515,15 +903,47 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta e\choice resposta b\choice resposta d\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta b\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
+\choice resposta d\choice resposta a\choice resposta b\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta a\choice resposta d\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta c\choice resposta a\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta d\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta d\choice resposta b\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta e\choice resposta b\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta e\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta d\choice resposta e\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta a\choice resposta e\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta b\choice resposta a\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
@@ -1531,6 +951,180 @@
 \question pergunta fácil
 \begin{oneparchoices}
 \itemsep0pt\parskip0pt\parsep0pt
-\choice resposta c\choice resposta d\choice resposta e\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\choice resposta d\choice resposta b\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta d\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta e\choice resposta b\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta a\choice resposta d\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta b\choice resposta e\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta d\choice resposta a\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta c\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta c\choice resposta a\choice resposta e\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta c\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta b\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta a\choice resposta b\choice resposta d\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta a\choice resposta d\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta d\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta c\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta e\choice resposta c\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta c\choice resposta e\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta b\choice resposta d\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta b\choice resposta c\choice resposta e\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta c\choice resposta a\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta b\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta d\choice resposta c\choice resposta e\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta a\choice resposta e\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta e\choice resposta c\choice resposta b\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta c\choice resposta b\choice resposta e\choice resposta d\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta d\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta d\choice resposta a\choice resposta c\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta a\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta b\choice resposta d\choice resposta e\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta a\choice resposta c\choice resposta d\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta c\choice resposta a\choice resposta b\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta e\choice resposta a\choice resposta c\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta a\choice resposta c\choice resposta e\choice resposta d\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta c\choice resposta d\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta d\choice resposta c\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta e\choice resposta d\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta d\choice resposta c\choice resposta b\choice resposta a\choice resposta e\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta d\choice resposta c\choice resposta b\choice resposta a\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta b\choice resposta d\choice resposta a\choice resposta c\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta e\choice resposta d\choice resposta c\choice resposta a\choice resposta b\end{oneparchoices}\vspace{0mm}
+\question pergunta fácil
+\begin{oneparchoices}
+\itemsep0pt\parskip0pt\parsep0pt
+\choice resposta b\choice resposta a\choice resposta c\choice resposta d\choice resposta e\end{oneparchoices}\vspace{0mm}
 \end{questions}
-}\end{document}
+}
+\ \ \newpage
+\end{document}

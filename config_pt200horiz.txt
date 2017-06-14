@@ -1,0 +1,41 @@
+numQE	       :: 90	      :: number of easy questions
+numQM	       :: 0	      :: number of mean questions
+numQH	       :: 0	      :: number of hard questions
+numQT	       :: 0	      :: number of textual questions
+folderCourse   :: course2016q2 :: folder containing the classes in csv files
+folderQuestions :: test200q      :: folder containing the database issues in txt files
+randomTests    :: 1           :: =0, questions and answers not random
+MCTest_sheets  :: 2	      :: =0 only answer sheet; =1 only questions; =2 cc
+template       :: 1	      :: =0, unsaved file with the templates *_GAB
+duplexPrinting :: 1	      :: =0, printing on one side of the sheet, cc, printing double-sided
+maxQuestQuadro :: 10	      :: maximum number of questions per answer sheet
+maxQuadrosHoz  :: 3	      :: maximum number of questions in horizontally
+headerByQuestion :: 1        :: =1 a header by textual question
+
+title          :: Universidade Federal do ABC
+course	       :: Processamento da Informação - BC0505
+teachers       :: Francisco de Assis Zampirolli
+period         :: 2/2016
+modality       :: Presencial
+date	       :: 22/06/2016
+logo	       :: ufabc.eps   :: logo in figs folder
+language       :: portuguese  :: for now, Portuguese or English
+
+instructions1 ::
+\item Pinte somente DENTRO DOS CÍRCULOS de cada questão.  
+\item Não rasure.  
+\item Cada questão possui uma única resposta correta.
+\item Somente serão consideradas as respostas na região "Parte 1" desta página para as questões de múltipla-escolha.
+
+instructions2 ::
+\item Proibida a consulta de livros ou anotações.  
+\item Proibido o uso de dispositivos eletrônicos. 
+\item Somente serão consideradas as respostas na região "Parte 1 - Quadro(s) de Respostas" para as questões de múltipla-escolha.
+
+instructions3 ::
+
+titPart1 :: Parte 1 - Quadro(s) de Respostas - Não utilize esta FOLHA como rascunho!
+titPart2 :: Parte 2 - Questões de Múltipla-Escolha
+titPart3 :: Parte 3 - Questões Dissertativas
+
+endTable ::
