@@ -1,6 +1,49 @@
 # -*- coding: utf-8 -*-
 
-# parte do código apresentado neste documento foi inspirado de https://code.google.com/p/criaprova
+'''
+    ===============================================================================
+    Program: script4corrections.py
+    Date: $ Date: 2017/09/16 10:00:11 $
+    Language: python, version 2.7
+    Author: Francisco de Assis Zampirolli,
+    http://professor.ufabc.edu.br/~fzampirolli
+    
+    Usage: python createTexTestsP1.py configP1.txt
+    
+    Description:
+    see http://vision.ufabc.edu.br/MCTest4 for more informations
+    
+    
+    Reference for the implementation:
+    Zampirolli, F. A., Goya, D., Pimentel, E. P., Kobayashi, G.
+    Evaluation Method Using a Blended Learning in an Introductory Programming
+    Course for Undergraduate.
+    submitted in http://www.ijdet.com/index.php/ijdet, in 10/10/2017
+    
+    Zampirolli, F. A., Batista, V. R., & Quilici-Gonzalez, J. A. (2016).
+    An automatic generator and corrector of multiple choice tests with random
+    answer keys. In Frontiers in Education Conference (FIE), 1-8.
+    
+    Terms of Use:
+    You can use / modify this program for any use you wish, provided you cite
+    the above references in any publication about it.
+    
+    Disclaimer:
+    In no event shall the authors or distributors be liable to any party for
+    direct, indirect, special, incidental, or consequential damages arising out
+    of the use of this software, its documentation, or any derivatives thereof,
+    even if the authors have been advised of the possibility of such damages.
+    The authors and distributors specifically disclaim any warranties, including,
+    but not limited to, the implied warranties of merchantability, fitness for a
+    particular purpose, and non-infringement. this software is provided on an
+    "as is" basis, and the authors and distributors have no obligation to provide
+    maintenance, support, updates, enhancements, or modifications.
+    
+    =================================================================================
+    '''
+
+# part of the code available in this document was inspired by https://code.google.com/p/criaprova
+
 
 import random, sys, os, os.path, glob, csv, socket, string, smtplib
 
