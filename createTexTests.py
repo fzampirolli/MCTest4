@@ -40,10 +40,8 @@
     maintenance, support, updates, enhancements, or modifications.
     
     =================================================================================
+    part of the code available in this document was inspired by https://code.google.com/p/criaprova
     '''
-
-# part of the code available in this document was inspired by https://code.google.com/p/criaprova
-
 
 import random, sys, os, os.path, glob, csv, socket, string, smtplib
 
@@ -456,6 +454,12 @@ def savesTemplates(gabaritos): # salva em disco todos os gabaritos num arquivo c
             except:
                 os.mkdir(past)
 
+            past += barra+'vision'+barra
+            try:
+                os.stat(past)
+            except:
+                os.mkdir(past)
+
             f = past+filename
             
             print "aquivo salvo com os gabaritos da cada aluno da turma:",f
@@ -522,7 +526,7 @@ def defineHeader(arqprova,strTurma,idAluno,nomeAluno): # define o cabeçalho de 
     # header da página 1/2
     arqprova.write("\\begin{table}[h]\\centering\n")
     arqprova.write("\\begin{tabular}{|p{16mm}|p{16cm}|}\n\hline")
-    arqprova.write("\multirow{4}{*}{\\hspace{-2mm}\\includegraphics[width=2cm]{../../../figs/"+config['logo'].replace('\n','')+"}}\n")
+    arqprova.write("\multirow{4}{*}{\\hspace{-2mm}\\includegraphics[width=2cm]{../../../../figs/"+config['logo'].replace('\n','')+"}}\n")
     arqprova.write("&\\vspace{-2mm}\\noindent\\large\\textbf{"+config['title'].decode('utf-8').encode("latin1")+"}\\\\\n")
     arqprova.write("&\\noindent\\textbf{"+course+"} "+config['course'].decode('utf-8').encode("latin1")+"\\\\\n")
     arqprova.write("&\\noindent\\textbf{"+teachers+"} "+config['teachers'].decode('utf-8').encode("latin1")+"\\\\\n")
@@ -616,8 +620,13 @@ def createTexTests(provas): # salva em disco todos os testes em arquivos .tex
         except:
             os.mkdir(past)
 
+        past += barra+'print'+barra
+        try:
+            os.stat(past)
+        except:
+            os.mkdir(past)
+
         f = past+filename
-        
 
         with open(f, 'w') as arqprova:
             
@@ -851,7 +860,7 @@ def createTex2PDF(provas):
         past = f[10:]
         arq = past[past.find(barra):]
         past = mypathTex+past[:past.find(barra)]
-        past += barra+folderQuestions
+        past += barra+folderQuestions+barra+'print'+barra
         f = past+arq
         p = os.getcwd()
         os.chdir(p+past[1:])
