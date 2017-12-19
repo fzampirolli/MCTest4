@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Latex http://manuels.github.io/texlive.js  -->
+
+<script>
+			$(function(){
+				$(".latex").each(function(i,e){
+					$(this).text(latex_to_js($(this).text()));
+				});
+			});
+</script>
+<style>
+			.latex{
+				padding:10px;
+			}
+</style>
+
+<!-- Scripts needed by CodeCogs Equation Editor -->
+<link rel="stylesheet" type="text/css" href="http://latex.codecogs.com/css/equation-embed.css" />
+<script type="text/javascript" src="http://latex.codecogs.com/js/eq_config.js" ></script>
+<script type="text/javascript" src="http://latex.codecogs.com/js/eq_editor-lite-18.js" ></script>
+<!-- End of Scripts needed -->
+<style type="text/css">
+#EqnEditor { text-align:left }
+</style>
+
+<script src="./MCTestQuestion.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function onDOMContentLoaded() {
+    document.querySelector('#update').addEventListener('click', updatePreview);
+function updatePreview() {
+
+      document.getElementById("campoPDF").value = getCamposTex();
+
+      var text = document.getElementById("campoPDF").value;
+
+      var iframe = document.querySelector('iframe');
+      iframe.src = 'https://latexonline.cc/compile?text=' + encodeURIComponent(text);
+    }
+});
+</script>
+
+<style>
+body {
+  flex-direction: column;
+  align-items: left;
+}
+iframe {
+    width: 800px;
+    height: 800px;
+}
+textarea {
+    width: 400px;
+}
+</style>
+    
+<script type="text/javascript">  
+function getSelectedOption(sel) {
+    var opt;
+    for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+        opt = sel.options[i];
+        if ( opt.selected === true ) {
+            break;
+        }
+    }
+    return opt;
+}
+
+function getCampos() {
+  var textToWrite;
+  var text = '';
+  var opt = getSelectedOption(correctAnswer);
+  
+  if (document.getElementById("campo0").value != '') {
+       textToWrite = getSelectedOption(difficulty).value + '::'
+       if (document.getElementById("topic").value != ''){
+          textToWrite += document.getElementById("topic").value + '::';
+       } else { text = ''} 
+       if (document.getElementById("variation").value != ''){
+          textToWrite += document.getElementById("variation").value + '::';
+       }
+       textToWrite += '\n' + document.getElementById("campo0").value + '\n'
+  } 
+
+  for(var i = 0;i < 7;i++){
+    if (document.getElementById("campo"+(i+1).toString()).value != '') {
+       if (opt.text == (i+1).toString()) {						   
+         text = '+'
+       } else { text = '-'} 			   
+       textToWrite += 'A' + text + ': ' + document.getElementById("campo"+(i+1).toString()).value  + '\n'
+    }		      
+  }
+  return textToWrite;		    
+}
+
+function getCamposTex() {
+   var textToWrite = getCampos();
+   const qLoad = new MCTestQuestion('','','',0,'',[]); 
+   qLoad.strToQuestion(textToWrite);		    
+
+   return qLoad.questionToTex();
+
+}
+		    
+function saveTextAsFile() {
+  var textToWrite = getCampos();
+		    
+  var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+  var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+		    
+  var downloadLink = document.createElement("a");
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+  if (window.webkitURL != null) {
+    // Chrome allows the link to be clicked
+    // without actually adding it to the DOM.
+    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+  } else {
+    // Firefox requires the link to be added to the DOM
+    // before it can be clicked.
+    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+  }
+
+  downloadLink.click();
+}
+
+function destroyClickedElement(event) {
+  document.body.removeChild(event.target);
+}
+
+function loadFileAsText() {
+  var fileToLoad = document.getElementById("fileToLoad").files[0];
+		    
+  var fileReader = new FileReader();
+  fileReader.onload = function(fileLoadedEvent)  {
+    var textFromFileLoaded = fileLoadedEvent.target.result;
+
+    const qLoad = new MCTestQuestion('','','',0,'',[]); 
+    qLoad.strToQuestion(textFromFileLoaded);
+						   
+    document.getElementById("campo0").value = qLoad.question;
+    document.getElementById("variation").value = qLoad.variation;
+    document.getElementById("topic").value = qLoad.topic;
+    document.getElementById("difficulty").value = qLoad.difficulty;
+    document.getElementById("correctAnswer").value = qLoad.correctAnswer+1;
+						   
+    for(var i = 0;i <  qLoad.answers.length;i++){
+      document.getElementById("campo"+(i+1).toString()).value = qLoad.answers[i];
+		      
+    }
+  };
+  fileReader.readAsText(fileToLoad, "UTF-8");
+}		       
+</script>
+
+
+</head>
+<body>
+  <H1>Gerador de questões para o formato do MCTest</H1>
+
+Assunto (opcional): <input id="topic" placeholder="ex. vetor"></input> <p/>
+Variação (opcional): <input id="variation" maxlength="1" size="1"  placeholder="a"></input> Apenas uma variação (com o mesmo caracter) de uma questão é sorteada para cada prova<p/>
+
+Dificuldade desta questão:
+<select name="difficulty" id="difficulty">
+  <option value="QE" selected>Simples</option> 
+  <option value="QM">Média</option>
+  <option value="QH">Complexa</option>
+</select>  
+  
+Resposta correta:
+<select name="correctAnswer" id="correctAnswer">
+  <option value="1" selected>1</option> 
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+</select>
+<p/>
+
+<h5>Os textos das Questões e das Alternativas podem conter o formato LaTeX (Ex.: fórmulas e símbolos entre $)</h5>
+
+<form name="answerform">
+Questão:
+<div id="editor0"></div><textarea name="entry.0.single" cols="50" rows="3" id="campo0" onClick="EqEditor.moveto('editor0')"></textarea><p/>
+
+Alternativas (Não saltar Arternativas. O número de Alternativas para todas as Questões de uma prova tem que ser igual!):<br/>
+<div id="editor1"></div><textarea name="entry.1.single" type="text" cols="50" rows="2" id="campo1" onClick="EqEditor.moveto('editor1')"></textarea>1 <br/>
+<div id="editor2"></div><textarea name="entry.2.single" type="text" cols="50" rows="2" id="campo2" onClick="EqEditor.moveto('editor2')"></textarea>2<br/>
+<div id="editor3"></div><textarea name="entry.3.single" type="text" cols="50" rows="2" id="campo3" onClick="EqEditor.moveto('editor3')"></textarea>3 (opcional)<br/>
+<div id="editor4"></div><textarea name="entry.4.single" type="text" cols="50" rows="2" id="campo4" onClick="EqEditor.moveto('editor4')"></textarea>4 (opcional)<br/>
+<div id="editor5"></div><textarea name="entry.5.single" type="text" cols="50" rows="2" id="campo5" onClick="EqEditor.moveto('editor5')"></textarea>5 (opcional)<br/>
+<div id="editor6"></div><textarea name="entry.6.single" type="text" cols="50" rows="2" id="campo6" onClick="EqEditor.moveto('editor6')"></textarea>6 (opcional)<br/>
+<div id="editor7"></div><textarea name="entry.7.single" type="text" cols="50" rows="2" id="campo7" onClick="EqEditor.moveto('editor7')"></textarea>7 (opcional)<p/>
+</form>
+
+<!-- Initialize Editor 1 -->
+<script type="text/javascript">
+EqEditor.embed('editor0','things','mini','en-us');
+var a0=new EqTextArea('equation1', 'campo0');
+var a1=new EqTextArea('equation2', 'campo1');
+var a2=new EqTextArea('equation3', 'campo2');
+var a3=new EqTextArea('equation4', 'campo3');
+var a4=new EqTextArea('equation5', 'campo4');
+var a5=new EqTextArea('equation6', 'campo5');
+var a6=new EqTextArea('equation7', 'campo6');
+var a7=new EqTextArea('equation7', 'campo7');
+EqEditor.add(a0,false);
+EqEditor.add(a1,false);
+EqEditor.add(a2,false);
+EqEditor.add(a3,false);
+EqEditor.add(a4,false);
+EqEditor.add(a5,false);
+EqEditor.add(a6,false);
+EqEditor.add(a7,false);
+</script>
+
+Arquivo:
+<input id="inputFileNameToSaveAs" value="SegInf_P1_q01a" size="20"></input> <button onclick="saveTextAsFile()">Salvar</button> <p/>
+
+Arquivo:
+<input id="fileToLoad" type="file"></input> <button onclick="loadFileAsText()">Ler</button> <p/>
+
+<hr/>
+
+<h4>PDF preview</h4>
+<textarea id="campoPDF" type="text" cols="50" rows="6"></textarea><button id='update'>PDF preview</button><br/>
+<iframe>
+</iframe>
+
+</body>
+</html>
