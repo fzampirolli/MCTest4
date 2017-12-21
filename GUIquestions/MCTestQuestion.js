@@ -17,7 +17,6 @@ class MCTestQuestion {
     for(var i = 0;i < lines.length;i++){
       if (i===0) { // dados gerais da questão
 	var s = lines[i].split('::');
-
 	if (s.length>3) {
 	    this.difficulty     = s[0];
 	    this.topic  = s[1];
@@ -36,14 +35,14 @@ class MCTestQuestion {
 	}
     	  
 	if (s.length>=2) {
-	  while (lines[++i].substr(0, 3)!='A-:' & lines[i].substr(0, 3)!='A+:') {
-	    question += lines[i].replace(/^\s+/,"")+'\n'; // retira espaço no início
+	  while (++i < lines.length-1 & lines[i].substr(0, 3)!='A-:' & lines[i].substr(0, 3)!='A+:') {
+	     question += lines[i].replace(/^\s+/,""); // retira espaço no início
 	  }
 	  i--;
 	  this.question = question;
 	}
       } else {
-	if (lines[i].substr(0, 3)=='A-:' || lines[i].substr(0, 3)=='A+:') {
+	if (this.difficulty != "QT" & lines[i].substr(0, 3)=='A-:' || lines[i].substr(0, 3)=='A+:') {
 	  if (lines[i].substr(0, 3)=='A+:') {
 	    this.correctAnswer = countAnswers;
 	  }
@@ -67,36 +66,40 @@ class MCTestQuestion {
       if (this.variation!=='')
         str += this.variation+"::";
       str += "\n"+this.question;
-   
-      for(var i = 0;i < this.answers.length; i++){
-        if (this.correctAnswer == i) {
+
+      if (this.difficulty != "QT") {
+
+        for(var i = 0;i < this.answers.length; i++){
+          if (this.correctAnswer == i) {
 	        str += "A+: " + this.answers[i]+"\n";
-        } else {
+          } else {
 	        str += "A-: " + this.answers[i]+"\n";
+          }
         }
-      }
+      }	  
       return str;
   }
 
 
  questionToTex () {
-     var str = '\\documentclass{article}\n\\begin{document}\n';
+     var str = "\\documentclass{article}\n\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage[brazilian]{babel}\n\\begin{document}\n\n";
      
-     str += "{\\bf Question:} "+this.question;
+     str += "{\\bf Question:} "+this.question+"\n";
 
-     str += "\\begin{enumerate}\n";
+     if (this.difficulty != "QT") {
+       str += "\n\\begin{enumerate}\n";
      
-      for(var i = 0;i < this.answers.length; i++){
-        if (this.correctAnswer == i) {
+       for(var i = 0;i < this.answers.length; i++){
+         if (this.correctAnswer == i) {
 	        str += "\\item {\\bf " + this.answers[i]+"}\n";
-        } else {
+         } else {
 	        str += "\\item " + this.answers[i]+"\n";
-        }
-      }
-
-      str += "\\end{enumerate}\n\n";
-      str += '\\end{document}\n';
-      return str;
+         }
+       }
+       str += "\\end{enumerate}\n\n";
+     }
+     str += '\\end{document}\n';
+     return str;
  }
     
 }

@@ -3,31 +3,21 @@
   <head>
     <meta charset="UTF-8">
 
-    <!-- Latex http://manuels.github.io/texlive.js  -->
+<!-- 
+Latex http://manuels.github.io/texlive.js  
+https://codepen.io/anon/pen/rpLxym
+-->
 
-<script>
-			$(function(){
-				$(".latex").each(function(i,e){
-					$(this).text(latex_to_js($(this).text()));
-				});
-			});
-</script>
-<style>
-			.latex{
-				padding:10px;
-			}
-</style>
+
+<script src="./MCTestQuestion.js"></script>
+
 
 <!-- Scripts needed by CodeCogs Equation Editor -->
 <link rel="stylesheet" type="text/css" href="http://latex.codecogs.com/css/equation-embed.css" />
 <script type="text/javascript" src="http://latex.codecogs.com/js/eq_config.js" ></script>
 <script type="text/javascript" src="http://latex.codecogs.com/js/eq_editor-lite-18.js" ></script>
 <!-- End of Scripts needed -->
-<style type="text/css">
-#EqnEditor { text-align:left }
-</style>
 
-<script src="./MCTestQuestion.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function onDOMContentLoaded() {
@@ -35,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function onDOMContentLoaded() {
 function updatePreview() {
 
       document.getElementById("campoPDF").value = getCamposTex();
+      document.getElementById("campoPDF").disabled = true;
 
       var text = document.getElementById("campoPDF").value;
 
@@ -70,7 +61,8 @@ function getSelectedOption(sel) {
     return opt;
 }
 
-function getCampos() {
+
+function getCampos() { // pega os campos do formulário e retorna uma string no formato do MCTest
   var textToWrite;
   var text = '';
   var opt = getSelectedOption(correctAnswer);
@@ -83,27 +75,28 @@ function getCampos() {
        if (document.getElementById("variation").value != ''){
           textToWrite += document.getElementById("variation").value + '::';
        }
-       textToWrite += '\n' + document.getElementById("campo0").value + '\n'
+       textToWrite += '\n' + document.getElementById("campo0").value+  '\n'; // enunciado da questão
   } 
 
-  for(var i = 0;i < 7;i++){
-    if (document.getElementById("campo"+(i+1).toString()).value != '') {
-       if (opt.text == (i+1).toString()) {						   
-         text = '+'
-       } else { text = '-'} 			   
-       textToWrite += 'A' + text + ': ' + document.getElementById("campo"+(i+1).toString()).value  + '\n'
-    }		      
+  if (document.getElementById("difficulty").value != "QT") {  // pega as alternativas, se não for "QT"				   
+    for(var i = 0;i < 7;i++){
+      if (document.getElementById("campo"+(i+1).toString()).value != '') {
+         if (opt.text == (i+1).toString()) {						   
+           text = '+';
+         } else { text = '-';} 			   
+         textToWrite += 'A' + text + ': ' + document.getElementById("campo"+(i+1).toString()).value  + '\n';
+      }		      
+    }
   }
   return textToWrite;		    
 }
 
 function getCamposTex() {
-   var textToWrite = getCampos();
-   const qLoad = new MCTestQuestion('','','',0,'',[]); 
-   qLoad.strToQuestion(textToWrite);		    
+   var textToWrite = getCampos();  
+   const q = new MCTestQuestion('','','',0,'',[]); 
+   q.strToQuestion(textToWrite);		    
 
-   return qLoad.questionToTex();
-
+   return q.questionToTex();
 }
 		    
 function saveTextAsFile() {
@@ -159,23 +152,73 @@ function loadFileAsText() {
   };
   fileReader.readAsText(fileToLoad, "UTF-8");
 }		       
-</script>
 
+function habilitaBtn () {
+    var op = document.getElementById("difficulty").value;
+    if (op == "QT") {
+        document.getElementById("correctAnswer").disabled = true;
+        document.getElementById("campo1").disabled = true;
+        document.getElementById("campo2").disabled = true;
+        document.getElementById("campo3").disabled = true;
+        document.getElementById("campo4").disabled = true;
+        document.getElementById("campo5").disabled = true;
+        document.getElementById("campo6").disabled = true;
+        document.getElementById("campo7").disabled = true;
+  } else {
+        document.getElementById("correctAnswer").disabled = false;
+        document.getElementById("campo1").disabled = false;
+        document.getElementById("campo2").disabled = false;
+        document.getElementById("campo3").disabled = false;
+        document.getElementById("campo4").disabled = false;
+        document.getElementById("campo5").disabled = false;
+        document.getElementById("campo6").disabled = false;
+        document.getElementById("campo7").disabled = false;
+  }
+}
+
+var habilitar = true;
+		       
+function habilitarAux() {
+  if(habilitar & document.getElementById('simbLatex').checked) {
+
+    EqEditor.embed('editor0','things','mini', 'en-us');
+    var a0=new EqTextArea('equation1', 'campo0');
+    var a1=new EqTextArea('equation2', 'campo1');
+    var a2=new EqTextArea('equation3', 'campo2');
+    var a3=new EqTextArea('equation4', 'campo3');
+    var a4=new EqTextArea('equation5', 'campo4');
+    var a5=new EqTextArea('equation6', 'campo5');
+    var a6=new EqTextArea('equation7', 'campo6');
+    var a7=new EqTextArea('equation7', 'campo7');
+    EqEditor.add(a0,false);
+    EqEditor.add(a1,false);
+    EqEditor.add(a2,false);
+    EqEditor.add(a3,false);
+    EqEditor.add(a4,false);
+    EqEditor.add(a5,false);
+    EqEditor.add(a6,false);
+    EqEditor.add(a7,false);
+
+    habilitar = false;      
+  }
+}
+</script>
 
 </head>
 <body>
   <H1>Gerador de questões para o formato do MCTest</H1>
 
-Assunto (opcional): <input id="topic" placeholder="ex. vetor"></input> <p/>
-Variação (opcional): <input id="variation" maxlength="1" size="1"  placeholder="a"></input> Apenas uma variação (com o mesmo caracter) de uma questão é sorteada para cada prova<p/>
+Assunto (opcional): <input id="topic" placeholder="Eq 2o grau"></input> <p/>
+Variação (opcional): <input id="variation" maxlength="1" size="1"  placeholder="a"></input> Apenas uma variação de uma questão (com o mesmo caracter) é sorteada para cada prova<p/>
 
-Dificuldade desta questão:
-<select name="difficulty" id="difficulty">
+Questão: 
+<select name="difficulty" id="difficulty" onchange="habilitaBtn()">
   <option value="QE" selected>Simples</option> 
   <option value="QM">Média</option>
   <option value="QH">Complexa</option>
+  <option value="QT">Dissertativa</option>
 </select>  
-  
+
 Resposta correta:
 <select name="correctAnswer" id="correctAnswer">
   <option value="1" selected>1</option> 
@@ -188,42 +231,52 @@ Resposta correta:
 </select>
 <p/>
 
-<h5>Os textos das Questões e das Alternativas podem conter o formato LaTeX (Ex.: fórmulas e símbolos entre $)</h5>
+<h5>Os textos das questões e das alternativas podem conter o formato LaTeX
+  - Auxílio aos símbolos? <input type="radio" name="simbLatex" id="simbLatex" onclick="habilitarAux()"/></h5>
 
 <form name="answerform">
 Questão:
-<div id="editor0"></div><textarea name="entry.0.single" cols="50" rows="3" id="campo0" onClick="EqEditor.moveto('editor0')"></textarea><p/>
+<div id="editor0"></div>
+<textarea name="entry.0.single" cols="50" rows="3" id="campo0"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor0')}"
+	  placeholder="Qual é a solução de $x^{2}=144$?"></textarea><p/>
 
-Alternativas (Não saltar Arternativas. O número de Alternativas para todas as Questões de uma prova tem que ser igual!):<br/>
-<div id="editor1"></div><textarea name="entry.1.single" type="text" cols="50" rows="2" id="campo1" onClick="EqEditor.moveto('editor1')"></textarea>1 <br/>
-<div id="editor2"></div><textarea name="entry.2.single" type="text" cols="50" rows="2" id="campo2" onClick="EqEditor.moveto('editor2')"></textarea>2<br/>
-<div id="editor3"></div><textarea name="entry.3.single" type="text" cols="50" rows="2" id="campo3" onClick="EqEditor.moveto('editor3')"></textarea>3 (opcional)<br/>
-<div id="editor4"></div><textarea name="entry.4.single" type="text" cols="50" rows="2" id="campo4" onClick="EqEditor.moveto('editor4')"></textarea>4 (opcional)<br/>
-<div id="editor5"></div><textarea name="entry.5.single" type="text" cols="50" rows="2" id="campo5" onClick="EqEditor.moveto('editor5')"></textarea>5 (opcional)<br/>
-<div id="editor6"></div><textarea name="entry.6.single" type="text" cols="50" rows="2" id="campo6" onClick="EqEditor.moveto('editor6')"></textarea>6 (opcional)<br/>
-<div id="editor7"></div><textarea name="entry.7.single" type="text" cols="50" rows="2" id="campo7" onClick="EqEditor.moveto('editor7')"></textarea>7 (opcional)<p/>
+Alternativas (não saltar arternativas; o número de alternativas para todas as questões de uma prova tem que ser igual!):<br/>
+<div id="editor1"></div>
+<textarea name="entry.1.single" type="text" cols="50" rows="2" id="campo1"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor1')}"
+	  placeholder="$x=12$ e $x=-12$"></textarea>1 <br/>
+
+<div id="editor2"></div>
+<textarea name="entry.2.single" type="text" cols="50" rows="2" id="campo2"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor2')}"
+	  placeholder="$x=11$"></textarea>2<br/>
+
+<div id="editor3"></div>
+<textarea name="entry.3.single" type="text" cols="50" rows="2" id="campo3"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor3')}"
+	  placeholder="opcional"></textarea>3<br/>
+
+<div id="editor4"></div>
+<textarea name="entry.4.single" type="text" cols="50" rows="2" id="campo4"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor4')}"
+	  placeholder="opcional"></textarea>4<br/>
+
+<div id="editor5"></div>
+<textarea name="entry.5.single" type="text" cols="50" rows="2" id="campo5"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor5')}"
+	  placeholder="opcional"></textarea>5<br/>
+
+<div id="editor6"></div>
+<textarea name="entry.6.single" type="text" cols="50" rows="2" id="campo6"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor6')}"
+	  placeholder="opcional"></textarea>6<br/>
+
+<div id="editor7"></div>
+<textarea name="entry.7.single" type="text" cols="50" rows="2" id="campo7"
+	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor7')}"
+	  placeholder="opcional"></textarea>7<p/>
 </form>
-
-<!-- Initialize Editor 1 -->
-<script type="text/javascript">
-EqEditor.embed('editor0','things','mini','en-us');
-var a0=new EqTextArea('equation1', 'campo0');
-var a1=new EqTextArea('equation2', 'campo1');
-var a2=new EqTextArea('equation3', 'campo2');
-var a3=new EqTextArea('equation4', 'campo3');
-var a4=new EqTextArea('equation5', 'campo4');
-var a5=new EqTextArea('equation6', 'campo5');
-var a6=new EqTextArea('equation7', 'campo6');
-var a7=new EqTextArea('equation7', 'campo7');
-EqEditor.add(a0,false);
-EqEditor.add(a1,false);
-EqEditor.add(a2,false);
-EqEditor.add(a3,false);
-EqEditor.add(a4,false);
-EqEditor.add(a5,false);
-EqEditor.add(a6,false);
-EqEditor.add(a7,false);
-</script>
 
 Arquivo:
 <input id="inputFileNameToSaveAs" value="SegInf_P1_q01a" size="20"></input> <button onclick="saveTextAsFile()">Salvar</button> <p/>
@@ -233,10 +286,9 @@ Arquivo:
 
 <hr/>
 
-<h4>PDF preview</h4>
-<textarea id="campoPDF" type="text" cols="50" rows="6"></textarea><button id='update'>PDF preview</button><br/>
-<iframe>
-</iframe>
+<button id='update'>PDF preview</button><br/>
+<textarea id="campoPDF" type="text" cols="50" rows="6"></textarea><br/>
+<iframe></iframe>
 
 </body>
 </html>
