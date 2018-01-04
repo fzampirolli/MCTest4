@@ -209,37 +209,38 @@ function habilitarAux() {
 </script>
 
 </head>
-  <body>
+<body>
 
     <a href="./index_pt.html"><img width="30" src="./BR.png"/></a>  <a href="./index.html"><img width="30" src="./EN.png"/></a>
-    
-  <H1>Question generator for MCTest format</H1>
-  
-Topic: <input id="topic" placeholder="Eq. 2nd grade"></input> <em>(optional)</em> <p/>
-Variation: <input id="variation" maxlength="1" size="1"  placeholder="a"></input> <em>(optional - only one variation of a question, with the same character, is sorted for each test)</em><p/>
 
-<em>The texts can contain the format LaTeX - Help with symbols? <input type="radio" name="simbLatex" id="simbLatex" onclick="habilitarAux()"/></em>
+  <H1>Gerador de questões para o formato do MCTest</H1>
+  
+Assunto: <input id="topic" placeholder="Eq 2o grau"></input> <em>(opcional)</em> <p/>
+Variação: <input id="variation" maxlength="1" size="1"  placeholder="a"></input> <em>(opcional - apenas uma variação de uma questão, com o mesmo caracter, é sorteada para cada prova)</em><p/>
+
+<em>Os textos podem conter o formato LaTeX
+  - Auxílio aos símbolos? <input type="radio" name="simbLatex" id="simbLatex" onclick="habilitarAux()"/></em>
 
 <form name="answerform">
-<strong>Question:</strong>
+<strong>Questão:</strong>
 <div id="editor0"></div>
 <textarea name="entry.0.single" cols="50" rows="4" id="campo0"
 	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor0')}"
-	  placeholder="What is the solution of $x^{2}=144$?"></textarea><p/>
+	  placeholder="Qual é a solução de $x^{2}=144$?"></textarea><p/>
 
 
-Type of question: 
+Tipo da questão: 
 <select name="difficulty" id="difficulty" onchange="habilitaBtn()">
-  <option value="QE" selected>Simple</option> 
-  <option value="QM">Median</option>
-  <option value="QH">Complex</option>
-  <option value="QT">Dissertation</option>
+  <option value="QE" selected>Simples</option> 
+  <option value="QM">Média</option>
+  <option value="QH">Complexa</option>
+  <option value="QT">Dissertativa</option>
 </select>  
 
 
 <hr/>
 
-Correct anwser:
+Alternativa correta:
 <select name="correctAnswer" id="correctAnswer">
   <option value="1" selected>1</option> 
   <option value="2">2</option>
@@ -250,13 +251,13 @@ Correct anwser:
   <option value="7">7</option>
 </select>
 
-<em>(do not miss artillery; the number of alternatives for all tests is the same!)) </em><p/>
+<em>(não saltar arternativas; o número de alternativas para todas as questões de uma prova tem que ser igual!) </em><p/>
 
-<strong>Anwser:</strong><br/>
+<strong>Alternativas:</strong><br/>
 <div id="editor1"></div>
 <textarea name="entry.1.single" type="text" cols="50" rows="2" id="campo1"
 	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor1')}"
-	  placeholder="$x=12$ and $x=-12$"></textarea>1 <br/>
+	  placeholder="$x=12$ e $x=-12$"></textarea>1 <br/>
 
 <div id="editor2"></div>
 <textarea name="entry.2.single" type="text" cols="50" rows="2" id="campo2"
@@ -266,39 +267,39 @@ Correct anwser:
 <div id="editor3"></div>
 <textarea name="entry.3.single" type="text" cols="50" rows="2" id="campo3"
 	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor3')}"
-	  placeholder="optional"></textarea>3<br/>
+	  placeholder="opcional"></textarea>3<br/>
 
 <div id="editor4"></div>
 <textarea name="entry.4.single" type="text" cols="50" rows="2" id="campo4"
 	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor4')}"
-	  placeholder="optional"></textarea>4<br/>
+	  placeholder="opcional"></textarea>4<br/>
 
 <div id="editor5"></div>
 <textarea name="entry.5.single" type="text" cols="50" rows="2" id="campo5"
 	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor5')}"
-	  placeholder="optional"></textarea>5<br/>
+	  placeholder="opcional"></textarea>5<br/>
 
 <div id="editor6"></div>
 <textarea name="entry.6.single" type="text" cols="50" rows="2" id="campo6"
 	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor6')}"
-	  placeholder="optional"></textarea>6<br/>
+	  placeholder="opcional"></textarea>6<br/>
 
 <div id="editor7"></div>
 <textarea name="entry.7.single" type="text" cols="50" rows="2" id="campo7"
 	  onClick="if(document.getElementById('simbLatex').checked){EqEditor.moveto('editor7')}"
-	  placeholder="optional"></textarea>7<p/>
+	  placeholder="opcional"></textarea>7<p/>
 </form>
 
 <hr/>
 
-Save file:
-<input id="inputFileNameToSaveAs" value="SegInf_P1_q01a" size="20"></input> <button onclick="saveTextAsFile()">Save</button> <p/>
+Salvar arquivo:
+<input id="inputFileNameToSaveAs" value="SegInf_P1_q01a" size="20"></input> <button onclick="saveTextAsFile()">Salvar</button> <p/>
 
-Read file:
-<input id="fileToLoad" type="file"></input> <button onclick="loadFileAsText()">Read</button> <p/>
+Ler arquivo:
+<input id="fileToLoad" type="file"></input> <button onclick="loadFileAsText()">Ler</button> <p/>
 
 
-<button id='update'>PDF preview</button><br/>
+<button id='update'>Ver PDF</button><br/>
 <textarea id="campoPDF" type="text" cols="50" rows="6"></textarea><br/>
 <iframe></iframe>
 
