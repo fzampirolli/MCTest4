@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br, en">
+<!-- 
+Latex http://manuels.github.io/texlive.js  
+https://codepen.io/anon/pen/rpLxym   
+
+<script src="./MCTestQuestion.js"></script>
+-->
+
+
+<script src="./utils.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<!-- Scripts needed by CodeCogs Equation Editor -->
+<link rel="stylesheet" type="text/css" href="http://latex.codecogs.com/css/equation-embed.css" />
+<script type="text/javascript" src="http://latex.codecogs.com/js/eq_config.js" ></script>
+<script type="text/javascript" src="http://latex.codecogs.com/js/eq_editor-lite-18.js" ></script>
+<!-- End of Scripts needed -->
+
+</head>
+<body>
+
+  <div style="text-align: right;"><a href="./index_pt.html"><img width="30" src="./BR.png"/></a>  <a href="./index.html"><img width="30" src="./EN.png"/></a></div>
+  
+  <H1>Gerar arquivo de configurações do MCTest</H1>
+  
+Número de questões:
+<input id="numQE" size="2" placeholder="0"></input> fáceis 
+<input id="numQM" size="2" placeholder="0"></input> médias 
+<input id="numQH" size="2" placeholder="0"></input> difíceis 
+<input id="numQT" size="2" placeholder="0"></input> dissertativas <p/>
+
+<input id="folderCourse" size="10" value="class2018"></input> pasta contendo o(s) arquivo(s) com a(s) <b>turma(s)</b> <em>(em MCTest/courses/; formato csv: RA; Nome Aluno)</em><br/>
+<input id="folderQuestions" size="10" value="Test1"></input> pasta contendo o(s) arquivo(s) com as <b>questões</b> <em>(em MCTest/questions/; formato txt ; <a href="../GUIquestions/index_pt.html">ver gerador</a>)</em><p/>
+
+<input type="checkbox" id="randomTests" checked /> Questões e respostas aleatórias? <br/>
+<input type="checkbox" id="template" checked /> Salvar gabaritos *_GAB? <p/>
+
+
+<form name=myform id="myform">Impressão: 
+<input type="checkbox" id="duplexPrinting" checked /> Frente e verso? 
+<input type="checkbox" id="headerByQuestion" /> Um cabeçalho por questão dissertativa?
+<input id="sheets0" type="radio" name=myform value="0">somente gabarito
+<input id="sheets1" type="radio" name=myform value="1">somente questões
+<input id="sheets2" type="radio" name=myform value="2" checked>ambos
+</form><p/>
+
+
+<input id="maxQuestQuadro" size="2" value="10"></input> Número máximo de questões por quadro <em>(>=4)</em><br/>
+<input id="maxQuadrosHoz" size="2" value="4"></input> Número máximo de quadros na horizontal <em>(quadro &isin; gabarito)</em><br/>
+
+<hr/>
+<h3>Cabeçalho:</h3>
+<input id="title" value="Universidade Federal do ABC" size="40"/> instituição <br/>
+<input id="course" value="Processamento da Informação - BC0505" size="40"/> curso <br/>
+<input id="teachers" value="Francisco de Assis Zampirolli" size="40"/> professor(es) <br/>
+<input id="period" value="2/2018" size="40"/> período <br/>
+<input id="modality" value="Presencial" size="40"/> modalidade <br/>
+<input id="date" value="15/03/2018" size="40"/> data <br/>
+<input id="logo" value="ufabc.eps" size="40"/> logo <em>(arquivo na pasta MCTest/fig/...)</em> <br/>
+<input id="language" value="portuguese" size="40"/> idioma <em>(portuguese ou english)</em><br/>
+
+<hr/>
+<h3>Instruções:</h3>
+<textarea type="text" cols="90" rows="3" id="instructions1">
+\item Em nenhuma hipótese haverá substituição deste QUADRO DE RESPOSTAS por erro de preenchimento do aluno;
+\item O QUADRO DE RESPOSTAS é o único documento que será utilizado para a correção das questões de múltipla-escolha; 
+\item As marcações dos CÍRCULOS correspondentes às respostas devem ser feitas PREENCHENDO TODO O ESPAÇO COMPREENDIDO PELO CÍRCULO e NÃO PODE PINTAR FORA DO CÍRCULO. Pintar preferencialmente com caneta de cor PRETA.
+</textarea>página do gabarito<br/>
+
+<textarea type="text" cols="90" rows="3" id="instructions2">
+\item Proibida a consulta de livros ou anotações;
+\item Proibido o uso de dispositivos eletrônicos;
+\item Somente serão consideradas as respostas na região Parte 1 - Quadro(s) de Respostas para as questões de múltipla-escolha.
+</textarea>questões de múltipla-escolha<br/>
+
+<textarea type="text" cols="90" rows="3" id="instructions3">
+\item Cada questão dever ser respondido em uma única folha, usar frente e verso;
+\item Pode ser feito a lápis.
+</textarea>questões dissertativas<p/>
+
+<hr/>
+
+Salvar arquivo:
+<input id="inputFileNameToSaveAs" value="configP1" size="20"></input> <button onclick="saveTextAsFile()">Salvar</button> <p/>
+
+Ler arquivo:
+<input id="fileToLoad" type="file"></input> <button onclick="loadFileAsText()">Ler</button> <p/>
+
+</body>
+</html>
+

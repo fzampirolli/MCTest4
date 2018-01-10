@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br, en">
+<!-- 
+Latex http://manuels.github.io/texlive.js  
+https://codepen.io/anon/pen/rpLxym   
+
+<script src="./MCTestQuestion.js"></script>
+-->
+
+
+<script src="./utils.js"></script>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<!-- Scripts needed by CodeCogs Equation Editor -->
+<link rel="stylesheet" type="text/css" href="http://latex.codecogs.com/css/equation-embed.css" />
+<script type="text/javascript" src="http://latex.codecogs.com/js/eq_config.js" ></script>
+<script type="text/javascript" src="http://latex.codecogs.com/js/eq_editor-lite-18.js" ></script>
+<!-- End of Scripts needed -->
+
+</head>
+<body>
+
+  <div style="text-align: right;"><a href="./index_pt.html"><img width="30" src="./BR.png"/></a>  <a href="./index.html"><img width="30" src="./EN.png"/></a></div>
+
+  <H1>Generate MCTest settings file</H1>
+  
+Number of questions:
+<input id="numQE" size="2" placeholder="0"></input> easy 
+<input id="numQM" size="2" placeholder="0"></input> mean 
+<input id="numQH" size="2" placeholder="0"></input> hard 
+<input id="numQT" size="2" placeholder="0"></input> textual <p/>
+
+<input id="folderCourse" size="10" value="class2018"></input> folder containing file(s) with <b>class(es)</b> <em>(into MCTest/courses/; format csv: RA; student)</em><br/>
+<input id="folderQuestions" size="10" value="Test1"></input> folder containing file(s) with <b>questions</b> <em>(into MCTest/questions/; format txt; <a href="../GUIquestions/index.html">see generator</a>)</em><p/>
+
+<input type="checkbox" id="randomTests" checked /> random questions and answers? <br/>
+<input type="checkbox" id="template" checked /> save templates * _GAB? <p/>
+
+
+<form name=myform id="myform">Print: 
+<input type="checkbox" id="duplexPrinting" checked /> front and back? 
+<input type="checkbox" id="headerByQuestion" /> one title per dissertative question?
+<input id="sheets0" type="radio" name=myform value="0">template only
+<input id="sheets1" type="radio" name=myform value="1">questions only
+<input id="sheets2" type="radio" name=myform value="2" checked>both
+</form><p/>
+
+
+<input id="maxQuestQuadro" size="2" value="10"></input> Maximum number of questions per frame <em>(>=$)</em><br/>
+<input id="maxQuadrosHoz" size="2" value="4"></input> Maximum number of frames horizontally <em>(frame &isin; template)</em><br/>
+
+<hr/>
+<h3>Header:</h3>
+<input id="title" value="Federal University of ABC" size="40"/> institution <br/>
+<input id="course" value="Processamento da Informação - BC0505" size="40"/> course <br/>
+<input id="teachers" value="Francisco de Assis Zampirolli" size="40"/> teacher(s) <br/>
+<input id="period" value="2/2018" size="40"/> period <br/>
+<input id="modality" value="Face to face" size="40"/> modality <br/>
+<input id="date" value="15/03/2018" size="40"/> date <br/>
+<input id="logo" value="ufabc.eps" size="40"/> logo <em>(file in folder MCTest/fig/...)</em> <br/>
+<input id="language" value="portuguese" size="40"/> language <em>(portuguese or english)</em><br/>
+
+<hr/>
+<h3>Instructions:</h3>
+<textarea type="text" cols="90" rows="3" id="instructions1">
+\item In no case will there be a replacement of this TABLE OF ANSWERS by error of filling of the student;
+\item The RESPONSE TABLE is the only document that will be used for the correction of multiple choice questions; 
+\item The CIRCLES marks corresponding to the answers MUST BE MADE FILLING ALL THE CIRCLE AND CAN NOT PAINT OUT OF THE CIRCLE. Preferably, paint with a black pen.
+</textarea> template page<br/>
+
+<textarea type="text" cols="90" rows="3" id="instructions2">
+\item It is forbidden to consult books or notes;
+\item Prohibited use of electronic devices;
+\item Only answers in the Region "Part 1 - Answer Template" for multiple-choice questions will be considered.
+</textarea> multiple-choice questions<br/>
+
+<textarea type="text" cols="90" rows="3" id="instructions3">
+\item Each question should be answered on a single sheet, use front and back;
+\item It can be done in pencil.
+</textarea> textual questions<p/>
+
+<hr/>
+
+Save file:
+<input id="inputFileNameToSaveAs" value="configP1" size="20"></input> <button onclick="saveTextAsFile()">Save</button> <p/>
+
+Read file:
+<input id="fileToLoad" type="file"></input> <button onclick="loadFileAsText()">Read</button> <p/>
+
+</body>
+</html>
+
+
