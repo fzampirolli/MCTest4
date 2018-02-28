@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Sintaxe:
-# ipython validCSV ./folder/
+# ipython validClassesCSV ./folder/
 
 import random, sys, os, os.path, glob, csv, socket, string, smtplib
 
@@ -49,9 +49,14 @@ def classesReadFiles(file):
     with open(file, 'rb') as f:
         reader = csv.reader(f, delimiter=';')
         for row in reader:
-            #print ">>>>", row
-            nome = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
+            
+            try:
+                nome = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
+            except ValueError:
+                print "ERRO:", file, row
+
             nome = nome[:40]
+
             ra = row[0]
             ra = ra[:11]
             ra = re.sub(u"[a-zA-Z]","0",ra)
