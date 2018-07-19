@@ -37,7 +37,8 @@ def readClassFilesConfig(p):
     fileConfigs = []
     for ext in listextConfig:
         for file in np.sort(glob.glob(p+ext)):
-            fileConfigs.append(file)
+            if (file[file.rfind(barra)+1:file.rfind(barra)+7].upper()=="CONFIG"): # pega todos config*.txt
+                fileConfigs.append(file)
     return fileConfigs
 
 def classesReadFiles(files):
@@ -118,7 +119,7 @@ def main(argv):
         if len(sys.argv)==2:
             path = sys.argv[1]
         else:
-            path = '/home/fz/Dropbox/__MCTest/MCTest4-EPUFABC/'
+            path = '/home/fz/Dropbox/PI/PI-Presencial/2018q1/script3MCTest/'
 
         #print path
         for f in readClassFilesConfig(path):
@@ -145,8 +146,8 @@ def main(argv):
                     runFlag = True
                             
             if runFlag:
-                print "RUN: " + "ipython " + path + "createTexTests.py " + f
-                os.system('ipython '+ path + 'createTexTests.py '+ f)
+                print "RUN: " + "ipython " + path + "createTestsROBO.py " + f
+                os.system('ipython '+ path + 'createTestsROBO.py '+ f)
                         
 
     except ValueError:

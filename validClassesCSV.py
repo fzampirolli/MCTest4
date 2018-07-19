@@ -46,10 +46,12 @@ import re
 
 def classesReadFiles(file):
     alunos = []
+#    print "#$#$#$", file
+
     with open(file, 'rb') as f:
         reader = csv.reader(f, delimiter=';')
         for row in reader:
-            
+ #           print row
             try:
                 nome = normalize('NFKD', row[1].decode('utf-8')).encode('ASCII', 'ignore') # retirar acentos
             except ValueError:
@@ -84,6 +86,8 @@ def writeCSVFiles(mypath,f,turma):
         for row in turma:
             spamWriter.writerow(row)
 
+from operator import itemgetter
+import collections
 def main():
     global barra
     try:
@@ -92,7 +96,14 @@ def main():
             
             for f in readQuestionsFiles(mypath):
                 alunos = classesReadFiles(f)
-                writeCSVFiles(mypath,f,alunos)
+                alunos = sorted(alunos[0:], key=itemgetter(1)) #ordenar pelo nome
+                s = list(np.array(alunos)[:,0])
+                r = [x for x, y in collections.Counter(s).items() if y > 1] #  RAs repetidos
+                if r:
+                    print "Oops!  Erro - RA repetido:", r
+                    exit
+                else:
+                    writeCSVFiles(mypath,f,alunos)
 
     except ValueError:
         print "Oops!  Erro in File:",sys.argv[1], "Try again..."

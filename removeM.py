@@ -1,17 +1,18 @@
+#!/usr/bin/ipython
+
 # -*- coding: utf-8 -*-
 import string
-import curses.ascii
+#import curses.ascii
+import sys
+import os
 
-arq = open('questions3.txt','r')
-arq1 = open('questions3a.txt','w')
-AllLines = arq.readlines()
+print "remove ^M in :", sys.argv[1]
 
-tam = len(AllLines)
-i = 0
-while i<tam:
-    string.replace( AllLines[i][:], '\r', '' )
-    arq1.write(AllLines[i][:])
-    i=i+1
-     
-arq1.close()
-arq.close()
+def convertFileWin2Linux(f):
+    #awk '{ sub("\r$", ""); print }' input.txt > output.txt
+    os.system(''' awk '{ sub("\\r$", ""); print }' '''+ f+ ' > '+ f[:-4] + '__a__.txt')
+    os.system('mv '+ f[:-4] + '__a__.txt ' + f)
+
+
+convertFileWin2Linux(sys.argv[1])
+convertFileWin2Linux(sys.argv[1])
